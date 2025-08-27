@@ -446,11 +446,15 @@ function renderKanoResults(kano) {
     
     return `
         <div class="result-card">
-            <h4><i class="bi bi-diagram-3 text-success"></i> Kano模型分析</h4>
-            <div class="chart-container">
+            <h4><i class="bi bi-diagram-3 text-success"></i> Kano模型矩陣分析</h4>
+            <p class="text-muted mb-3">
+                <small>氣泡大小表示各類別的比例，位置反映功能實現程度與滿意度影響的關係</small>
+            </p>
+            <div class="chart-container" style="height: 400px;">
                 <canvas id="kanoChart"></canvas>
             </div>
             <div class="mt-3">
+                <h6>類別分布統計</h6>
                 ${Object.entries(categories).map(([category, percentage]) => `
                     <div class="progress-item">
                         <div class="progress-label">
@@ -463,6 +467,15 @@ function renderKanoResults(kano) {
                         </div>
                     </div>
                 `).join('')}
+            </div>
+            <div class="mt-3">
+                <small class="text-muted">
+                    <strong>解讀說明：</strong><br>
+                    • <strong>基礎型(Must-be):</strong> 必須具備的功能，缺少會造成不滿<br>
+                    • <strong>期望型(One-dimensional):</strong> 越完善滿意度越高<br>
+                    • <strong>魅力型(Attractive):</strong> 意外驚喜功能，能大幅提升滿意度<br>
+                    • <strong>無差異:</strong> 對滿意度影響不大的功能
+                </small>
             </div>
         </div>
     `;
@@ -555,37 +568,175 @@ function renderKanoChart() {
     
     const kano = evaluationResult.kano_evaluation;
     const categories = kano.summary.category_percentages;
+    const results = kano.results || {};
+    
+    // 準備散點圖數據
+    const scatterData = [];
+    const categoryColors = {
+        'Must-be': '#dc3545',
+        'One-dimensional': '#007bff', 
+        'Attractive': '#28a745',
+        'Indifferent': '#6c757d',
+        'Reverse': '#6f42c1',
+        'Questionable': '#fd7e14'
+    };
+    
+    // 為每個類別創建數據點
+    Object.entries(categories).forEach(([category, percentage]) => {
+        if (percentage > 0) {
+            // 根據類別設置在矩陣中的位置
+            let x, y;
+            switch(category) {
+                case 'Must-be':
+                    x = 0.8; y = 0.2; // 右下：高實現度，低滿意度變化
+                    break;
+                case 'One-dimensional':
+                    x = 0.8; y = 0.8; // 右上：高實現度，高滿意度
+                    break;
+                case 'Attractive':
+                    x = 0.2; y = 0.8; // 左上：低實現度，高滿意度變化
+                    break;
+                case 'Indifferent':
+                    x = 0.5; y = 0.2; // 中下：中等實現度，低滿意度變化
+                    break;
+                case 'Reverse':
+                    x = 0.2; y = 0.2; // 左下：低實現度，低滿意度
+                    break;
+                case 'Questionable':
+                    x = 0.5; y = 0.5; // 中心：需要重新評估
+                    break;
+                default:
+                    x = 0.5; y = 0.5;
+            }
+            
+            scatterData.push({
+                x: x,
+                y: y,
+                r: Math.sqrt(percentage) * 3, // 氣泡大小反映比例
+                category: category,
+                percentage: percentage
+            });
+        }
+    });
     
     new Chart(canvas, {
-        type: 'doughnut',
+        type: 'scatter',
         data: {
-            labels: Object.keys(categories).map(getKanoCategoryName),
-            datasets: [{
-                data: Object.values(categories),
-                backgroundColor: [
-                    '#dc3545', // Must-be (紅色)
-                    '#007bff', // One-dimensional (藍色)
-                    '#28a745', // Attractive (綠色)
-                    '#6c757d', // Indifferent (灰色)
-                    '#6f42c1', // Reverse (紫色)
-                    '#fd7e14'  // Questionable (橙色)
-                ],
-                borderWidth: 2
-            }]
+            datasets: scatterData.map(point => ({
+                label: getKanoCategoryName(point.category),
+                data: [{
+                    x: point.x,
+                    y: point.y,
+                    r: point.r
+                }],
+                backgroundColor: categoryColors[point.category] + '80', // 半透明
+                borderColor: categoryColors[point.category],
+                borderWidth: 2,
+                pointRadius: point.r,
+                showLine: false
+            }))
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    min: 0,
+                    max: 1,
+                    title: {
+                        display: true,
+                        text: '功能實現程度 (Well Implemented)',
+                        font: { size: 12 }
+                    },
+                    grid: {
+                        display: true,
+                        color: '#e9ecef'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            if (value === 0) return '低';
+                            if (value === 0.5) return '中';
+                            if (value === 1) return '高';
+                            return '';
+                        }
+                    }
+                },
+                y: {
+                    min: 0,
+                    max: 1,
+                    title: {
+                        display: true,
+                        text: '滿意度影響 (High Satisfaction)',
+                        font: { size: 12 }
+                    },
+                    grid: {
+                        display: true,
+                        color: '#e9ecef'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            if (value === 0) return '低';
+                            if (value === 0.5) return '中'; 
+                            if (value === 1) return '高';
+                            return '';
+                        }
+                    }
+                }
+            },
             plugins: {
                 legend: {
-                    position: 'bottom'
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 15,
+                        font: { size: 11 }
+                    }
                 },
                 tooltip: {
                     callbacks: {
+                        title: function() {
+                            return 'Kano 模型分析';
+                        },
                         label: function(context) {
-                            return context.label + ': ' + context.parsed.toFixed(1) + '%';
+                            const dataset = context.dataset;
+                            const point = scatterData.find(p => 
+                                getKanoCategoryName(p.category) === dataset.label
+                            );
+                            return `${dataset.label}: ${point?.percentage.toFixed(1)}%`;
                         }
                     }
+                },
+                annotation: {
+                    annotations: {
+                        // 添加象限分割線
+                        line1: {
+                            type: 'line',
+                            xMin: 0.5,
+                            xMax: 0.5,
+                            yMin: 0,
+                            yMax: 1,
+                            borderColor: '#dee2e6',
+                            borderWidth: 1,
+                            borderDash: [5, 5]
+                        },
+                        line2: {
+                            type: 'line',
+                            xMin: 0,
+                            xMax: 1,
+                            yMin: 0.5,
+                            yMax: 0.5,
+                            borderColor: '#dee2e6',
+                            borderWidth: 1,
+                            borderDash: [5, 5]
+                        }
+                    }
+                }
+            },
+            elements: {
+                point: {
+                    hoverRadius: 8
                 }
             }
         }

@@ -7,8 +7,10 @@ let currentStep = 'dashboard';
 let projectInfo = {};
 let kanoQuestions = [];
 let susQuestions = [];
+let aipetQuestions = [];
 let kanoResponses = {};
 let susResponses = {};
+let aipetResponses = {};
 let evaluationResult = null;
 
 // API Base URL
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showDashboard();
     loadKanoQuestions();
     loadSUSQuestions();
+    loadAIPETQuestions();
     loadDashboardStats();
     
     // 綁定表單事件
@@ -246,6 +249,119 @@ async function loadSUSQuestions() {
     }
 }
 
+// Load AIPET questions
+async function loadAIPETQuestions() {
+    try {
+        const response = await fetch(`${API_BASE}/aipet/questions`);
+        const data = await response.json();
+        
+        if (data.success) {
+            aipetQuestions = data.questions;
+        } else {
+            showAlert('Failed to load AIPET questions: ' + data.error, 'error');
+        }
+    } catch (error) {
+        showAlert('Network error: ' + error.message, 'error');
+    }
+}
+
+// Render AIPET questions
+function renderAIPETQuestions() {
+    const container = document.getElementById('aipetQuestions');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    // Group questions by dimension for better organization
+    const dimensionGroups = {
+        'A': { name: 'Agency (代理能力)', questions: [] },
+        'I': { name: 'Interaction (互動模式)', questions: [] },
+        'P': { name: 'Privacy (隱私增強)', questions: [] },
+        'E': { name: 'Experience (體驗連續性)', questions: [] },
+        'T': { name: 'Trust (信任建立)', questions: [] }
+    };
+    
+    aipetQuestions.forEach(question => {
+        dimensionGroups[question.dimension].questions.push(question);
+    });
+    
+    // Render each dimension group
+    Object.keys(dimensionGroups).forEach(dimension => {
+        const group = dimensionGroups[dimension];
+        if (group.questions.length === 0) return;
+        
+        const dimensionDiv = document.createElement('div');
+        dimensionDiv.className = 'aipet-dimension-group';
+        dimensionDiv.innerHTML = `
+            <div class="dimension-header">
+                <h5><i class="bi bi-tag"></i> ${group.name}</h5>
+            </div>
+        `;
+        
+        group.questions.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question-card aipet-question';
+            questionDiv.innerHTML = `
+                <div class="question-title">
+                    <i class="bi bi-chat-dots"></i>
+                    ${question.id}. ${question.text}
+                </div>
+                <div class="question-meta">
+                    <small class="text-muted">Category: ${question.sub_category} | Optional</small>
+                </div>
+                <div class="aipet-textarea-wrapper">
+                    <textarea 
+                        id="aipet-${question.id}" 
+                        class="aipet-textarea" 
+                        placeholder="Share your thoughts here... (optional)"
+                        rows="4"
+                        onchange="updateAIPETResponse('${question.id}', this.value)"
+                    ></textarea>
+                    <div class="textarea-helper">
+                        <small class="text-muted">Feel free to elaborate on your preferences and experiences</small>
+                    </div>
+                </div>
+            `;
+            dimensionDiv.appendChild(questionDiv);
+        });
+        
+        container.appendChild(dimensionDiv);
+    });
+    
+    // Add progress indicator
+    const progressDiv = document.createElement('div');
+    progressDiv.className = 'aipet-progress mt-3';
+    progressDiv.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center">
+            <span id="aipetProgress">0 of ${aipetQuestions.length} questions answered</span>
+            <span class="text-muted">Complete as many as you'd like</span>
+        </div>
+    `;
+    container.appendChild(progressDiv);
+}
+
+// Update AIPET response
+function updateAIPETResponse(questionId, value) {
+    if (value && value.trim()) {
+        aipetResponses[questionId] = value.trim();
+    } else {
+        delete aipetResponses[questionId];
+    }
+    
+    // Update progress
+    updateAIPETProgress();
+}
+
+// Update AIPET progress indicator
+function updateAIPETProgress() {
+    const progressElement = document.getElementById('aipetProgress');
+    if (progressElement) {
+        const answered = Object.keys(aipetResponses).length;
+        const total = aipetQuestions.length;
+        progressElement.textContent = `${answered} of ${total} questions answered`;
+    }
+}
+
 // Render SUS questions
 function renderSUSQuestions() {
     const container = document.getElementById('susQuestions');
@@ -319,6 +435,34 @@ async function submitSUSEvaluation() {
         return;
     }
     
+    // Instead of submitting immediately, go to AIPET questions
+    showAIPETQuestions();
+}
+
+// Show AIPET Questions section
+function showAIPETQuestions() {
+    hideAllSections();
+    const aipetSection = document.getElementById('aipetQuestionsSection');
+    if (aipetSection) {
+        aipetSection.style.display = 'block';
+        renderAIPETQuestions();
+        currentStep = 'aipet-questions';
+        updateNavigation('new-project'); // Keep new-project nav active
+    }
+}
+
+// Skip AIPET questions and go directly to results
+function skipAIPETQuestions() {
+    submitFinalEvaluation();
+}
+
+// Submit AIPET responses and complete evaluation
+function submitAIPETResponses() {
+    submitFinalEvaluation();
+}
+
+// Submit final evaluation with all data
+async function submitFinalEvaluation() {
     // Show loading animation
     showLoading(true);
     
@@ -327,7 +471,8 @@ async function submitSUSEvaluation() {
         const evaluationData = {
             project_info: projectInfo,
             kano_responses: kanoResponses,
-            sus_responses: susResponses
+            sus_responses: susResponses,
+            aipet_responses: aipetResponses
         };
         
         // Send evaluation request
@@ -392,6 +537,7 @@ function renderResults() {
         <div class="result-grid">
             ${renderSUSResults(sus)}
             ${renderKanoResults(evaluationResult.kano_evaluation)}
+            ${evaluationResult.aipet_evaluation ? renderAIPETResults(evaluationResult.aipet_evaluation) : ''}
             ${renderRecommendations(evaluationResult)}
             ${renderOverallAssessment(overall)}
         </div>
@@ -479,6 +625,87 @@ function renderKanoResults(kano) {
             </div>
         </div>
     `;
+}
+
+// Render AIPET Results
+function renderAIPETResults(aipet) {
+    const analysis = aipet.analysis;
+    const completionRate = analysis.completion_rate;
+    
+    if (completionRate === 0) {
+        return `
+            <div class="result-card">
+                <h4><i class="bi bi-chat-dots text-purple"></i> AIPET Insights</h4>
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    No AIPET responses were provided. Consider filling out the open-ended questions in future evaluations for personalized Agentive UX insights.
+                </div>
+            </div>
+        `;
+    }
+    
+    return `
+        <div class="result-card">
+            <h4><i class="bi bi-chat-dots text-purple"></i> AIPET Framework Insights</h4>
+            <p class="text-muted mb-3">
+                <small>Responses analyzed through the AIPET framework for Agentive UX design</small>
+            </p>
+            
+            <div class="mb-4">
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Participation Rate</span>
+                        <span>${analysis.answered_questions}/${analysis.total_questions} questions (${completionRate.toFixed(1)}%)</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-purple" style="width: ${completionRate}%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dimension-coverage">
+                ${Object.entries(analysis.dimension_coverage).map(([dim, data]) => `
+                    <div class="coverage-item">
+                        <div class="coverage-percentage">${data.percentage.toFixed(0)}%</div>
+                        <div class="coverage-label">${dim} - ${data.name.split('(')[0].trim()}</div>
+                        <div class="text-muted" style="font-size: 11px;">${data.answered}/${data.total} questions</div>
+                    </div>
+                `).join('')}
+            </div>
+            
+            ${analysis.insights.length > 0 ? `
+                <div class="aipet-insights mt-4">
+                    <h6>Key Insights</h6>
+                    ${analysis.insights.map(insight => `
+                        <div class="insight-card ${insight.type}">
+                            <div class="insight-title">
+                                <i class="bi bi-${getInsightIcon(insight.type)}"></i>
+                                ${insight.title}
+                            </div>
+                            <p class="mb-0">${insight.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            ` : ''}
+            
+            <div class="mt-3">
+                <small class="text-muted">
+                    <strong>AIPET Framework:</strong> Agency (A), Interaction (I), Privacy (P), Experience (E), Trust (T)<br>
+                    These insights help guide the transition from traditional UI design to Agentive UX design.
+                </small>
+            </div>
+        </div>
+    `;
+}
+
+// Helper function for AIPET insight icons
+function getInsightIcon(type) {
+    switch (type) {
+        case 'positive': return 'check-circle';
+        case 'neutral': return 'info-circle';
+        case 'suggestion': return 'lightbulb';
+        default: return 'chat-dots';
+    }
 }
 
 // 渲染建議

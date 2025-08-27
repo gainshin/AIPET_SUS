@@ -217,6 +217,36 @@
                 </div>
             </div>
 
+            <!-- AIPET Open-ended Questions Section -->
+            <div id="aipetQuestionsSection" class="dashboard-section" style="display: none;">
+                <div class="assessment-card">
+                    <div class="assessment-header" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+                        <h3>
+                            <i class="bi bi-chat-dots"></i>
+                            Step 4: AIPET Open-ended Insights (Optional)
+                        </h3>
+                        <p>Help us understand your preferences for AI Agent interaction design. All questions are optional - share as much or as little as you're comfortable with.</p>
+                    </div>
+                    <div class="assessment-body">
+                        <div class="alert alert-info mb-4">
+                            <i class="bi bi-info-circle"></i>
+                            <strong>Optional Feedback:</strong> These questions help improve Agentive UX design based on the AIPET framework (Agency, Interaction, Privacy, Experience, Trust). Your insights contribute to research on human-AI collaboration.
+                        </div>
+                        <div id="aipetQuestions"></div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="skipAIPETQuestions()">
+                                Skip AIPET Questions
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                            <button type="button" class="btn-primary" onclick="submitAIPETResponses()">
+                                Submit Responses & Complete Assessment
+                                <i class="bi bi-check-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Results Section -->
             <div id="resultsSection" class="dashboard-section" style="display: none;">
                 <div class="assessment-card">

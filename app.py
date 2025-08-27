@@ -15,6 +15,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from models.kano_model import KanoModelEvaluator, KanoCategory
 from models.sus_scale import SUSEvaluator, SUSGrade
+from models.aipet_questions import AIPETQuestionnaire
 from utils.report_generator import ReportGenerator
 from utils.data_manager import DataManager
 
@@ -24,6 +25,7 @@ CORS(app)  # 允許跨域請求
 # 初始化評估器
 kano_evaluator = KanoModelEvaluator()
 sus_evaluator = SUSEvaluator()
+aipet_evaluator = AIPETQuestionnaire()
 data_manager = DataManager()
 
 @app.route('/')
@@ -67,6 +69,28 @@ def get_sus_questions():
             'error': str(e)
         }), 500
 
+@app.route('/api/aipet/questions')
+def get_aipet_questions():
+    """獲取AIPET開放性問題"""
+    try:
+        questions = aipet_evaluator.get_questions()
+        questions_by_dimension = aipet_evaluator.get_questions_by_dimension()
+        dimension_stats = aipet_evaluator.get_dimension_statistics()
+        
+        return jsonify({
+            'success': True,
+            'questions': questions,
+            'questions_by_dimension': questions_by_dimension,
+            'dimension_statistics': dimension_stats,
+            'total_questions': len(questions),
+            'note': 'All AIPET questions are optional. Answer as many as you feel comfortable with.'
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
 @app.route('/api/evaluate', methods=['POST'])
 def evaluate():
     """綜合評估API"""
@@ -83,13 +107,18 @@ def evaluate():
         project_info = data.get('project_info', {})
         kano_responses = data.get('kano_responses', {})
         sus_responses_raw = data.get('sus_responses', {})
+        aipet_responses = data.get('aipet_responses', {})
         
         # 確保SUS響應為整數類型
         sus_responses = {}
+        app.logger.info(f"DEBUG: sus_responses_raw type and content: {type(sus_responses_raw)} - {sus_responses_raw}")
         for key, value in sus_responses_raw.items():
+            app.logger.info(f"DEBUG: Converting {key}: {value} (type: {type(value)})")
             try:
                 sus_responses[key] = int(value)
+                app.logger.info(f"DEBUG: Converted {key} to {sus_responses[key]} (type: {type(sus_responses[key])})")
             except (ValueError, TypeError):
+                app.logger.error(f"DEBUG: Conversion failed for {key}: {value} (type: {type(value)})")
                 return jsonify({
                     'success': False,
                     'error': f'SUS回答必須是數字，問題 {key} 的回答是 {value}'
@@ -120,6 +149,13 @@ def evaluate():
         sus_result = sus_evaluator.evaluate(sus_responses)
         sus_detailed = sus_evaluator.generate_detailed_report(sus_responses)
         
+        # 執行AIPET開放性問題分析 (可選)
+        aipet_analysis = None
+        aipet_validation = None
+        if aipet_responses:
+            aipet_validation = aipet_evaluator.validate_responses(aipet_responses)
+            aipet_analysis = aipet_evaluator.analyze_responses(aipet_responses)
+        
         # 生成綜合評估結果
         evaluation_result = {
             'project_info': project_info,
@@ -143,8 +179,17 @@ def evaluate():
                 'acceptability': sus_result.acceptability,
                 'detailed_analysis': sus_detailed
             },
-            'overall_assessment': generate_overall_assessment(kano_summary, sus_result)
+            'overall_assessment': generate_overall_assessment(kano_summary, sus_result, aipet_analysis)
         }
+        
+        # 添加AIPET評估結果（如果有的話）
+        if aipet_analysis:
+            evaluation_result['aipet_evaluation'] = {
+                'analysis': aipet_analysis,
+                'validation': aipet_validation,
+                'responses_provided': len([r for r in aipet_responses.values() if r and r.strip()]),
+                'total_questions': len(aipet_evaluator.get_questions())
+            }
         
         # 保存評估結果
         evaluation_id = data_manager.save_evaluation(evaluation_result)
@@ -162,7 +207,7 @@ def evaluate():
             'error': f'評估過程中發生錯誤: {str(e)}'
         }), 500
 
-def generate_overall_assessment(kano_summary, sus_result):
+def generate_overall_assessment(kano_summary, sus_result, aipet_analysis=None):
     """生成綜合評估"""
     assessment = {
         'overall_score': 0,
@@ -221,6 +266,24 @@ def generate_overall_assessment(kano_summary, sus_result):
         assessment['priority_actions'].append('Prioritize meeting basic requirements')
     if kano_summary['category_percentages'].get('One-dimensional', 0) > 30:
         assessment['priority_actions'].append('Enhance performance of expected features')
+    
+    # Include AIPET insights if available
+    if aipet_analysis:
+        completion_rate = aipet_analysis['completion_rate']
+        
+        # Add AIPET-based strengths
+        if completion_rate >= 75:
+            assessment['key_strengths'].append('High engagement with Agentive UX feedback collection')
+        
+        # Add AIPET-based priority actions
+        if completion_rate >= 50:
+            assessment['priority_actions'].append('Leverage detailed user insights to implement AIPET framework recommendations')
+        
+        # Add dimension-specific insights
+        high_coverage_dims = [dim for dim, data in aipet_analysis['dimension_coverage'].items() 
+                             if data['percentage'] >= 75]
+        if len(high_coverage_dims) >= 3:
+            assessment['key_strengths'].append('Strong user feedback across multiple AIPET dimensions')
     
     return assessment
 

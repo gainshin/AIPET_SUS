@@ -218,3 +218,323 @@ AttributeError: type object 'Faults' has no attribute 'utf-8'
 2025-08-27 15:07:13,544 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2025-08-27 15:07:13,739 INFO waiting for ai_agent_evaluator to stop
 2025-08-27 15:07:13,745 WARN stopped: ai_agent_evaluator (terminated by SIGTERM)
+2025-08-27 15:24:44,701 INFO spawned: 'ai_agent_evaluator' with pid 17309
+2025-08-27 15:24:45,704 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:46,846 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:47,849 INFO spawned: 'ai_agent_evaluator' with pid 17314
+2025-08-27 15:24:48,851 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:49,754 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:49,756 INFO spawned: 'ai_agent_evaluator' with pid 17320
+2025-08-27 15:24:50,767 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:51,457 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:52,460 INFO spawned: 'ai_agent_evaluator' with pid 17325
+2025-08-27 15:24:53,462 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:54,226 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:55,228 INFO spawned: 'ai_agent_evaluator' with pid 17333
+2025-08-27 15:24:56,230 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:57,037 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:57,039 INFO spawned: 'ai_agent_evaluator' with pid 17336
+2025-08-27 15:24:58,053 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:24:58,904 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:24:59,908 INFO spawned: 'ai_agent_evaluator' with pid 17341
+2025-08-27 15:25:00,910 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:02,696 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:03,700 INFO spawned: 'ai_agent_evaluator' with pid 17350
+2025-08-27 15:25:04,702 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:05,453 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:06,470 INFO spawned: 'ai_agent_evaluator' with pid 17356
+2025-08-27 15:25:07,944 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:08,246 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:09,250 INFO spawned: 'ai_agent_evaluator' with pid 17362
+2025-08-27 15:25:10,252 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:10,952 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:11,956 INFO spawned: 'ai_agent_evaluator' with pid 17367
+2025-08-27 15:25:12,958 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:13,619 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:14,622 INFO spawned: 'ai_agent_evaluator' with pid 17372
+2025-08-27 15:25:15,624 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:16,354 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:17,357 INFO spawned: 'ai_agent_evaluator' with pid 17377
+2025-08-27 15:25:18,359 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:19,028 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:20,031 INFO spawned: 'ai_agent_evaluator' with pid 17381
+2025-08-27 15:25:21,033 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:21,667 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:22,670 INFO spawned: 'ai_agent_evaluator' with pid 17386
+2025-08-27 15:25:23,672 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:24,423 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:25,427 INFO spawned: 'ai_agent_evaluator' with pid 17391
+2025-08-27 15:25:26,429 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:27,102 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:28,105 INFO spawned: 'ai_agent_evaluator' with pid 17395
+2025-08-27 15:25:29,106 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:29,746 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:30,749 INFO spawned: 'ai_agent_evaluator' with pid 17400
+2025-08-27 15:25:31,751 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:33,438 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:34,442 INFO spawned: 'ai_agent_evaluator' with pid 17419
+2025-08-27 15:25:35,444 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:37,167 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:38,170 INFO spawned: 'ai_agent_evaluator' with pid 17435
+2025-08-27 15:25:39,172 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:39,860 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:40,864 INFO spawned: 'ai_agent_evaluator' with pid 17440
+2025-08-27 15:25:41,866 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:43,525 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:44,528 INFO spawned: 'ai_agent_evaluator' with pid 17450
+2025-08-27 15:25:45,529 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:47,296 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:48,299 INFO spawned: 'ai_agent_evaluator' with pid 17473
+2025-08-27 15:25:49,301 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:49,930 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:50,933 INFO spawned: 'ai_agent_evaluator' with pid 17478
+2025-08-27 15:25:51,934 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:52,610 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:53,614 INFO spawned: 'ai_agent_evaluator' with pid 17484
+2025-08-27 15:25:54,616 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:55,316 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:56,319 INFO spawned: 'ai_agent_evaluator' with pid 17489
+2025-08-27 15:25:57,321 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:25:57,978 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:25:58,981 INFO spawned: 'ai_agent_evaluator' with pid 17500
+2025-08-27 15:25:59,983 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:00,726 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:01,730 INFO spawned: 'ai_agent_evaluator' with pid 17510
+2025-08-27 15:26:02,732 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:03,422 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:04,425 INFO spawned: 'ai_agent_evaluator' with pid 17517
+2025-08-27 15:26:05,427 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:06,104 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:07,107 INFO spawned: 'ai_agent_evaluator' with pid 17522
+2025-08-27 15:26:08,109 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:09,784 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:10,787 INFO spawned: 'ai_agent_evaluator' with pid 17527
+2025-08-27 15:26:11,789 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:12,531 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:13,535 INFO spawned: 'ai_agent_evaluator' with pid 17534
+2025-08-27 15:26:14,537 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:15,398 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:16,401 INFO spawned: 'ai_agent_evaluator' with pid 17539
+2025-08-27 15:26:17,403 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:18,251 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:19,256 INFO spawned: 'ai_agent_evaluator' with pid 17546
+2025-08-27 15:26:20,269 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:21,444 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:22,448 INFO spawned: 'ai_agent_evaluator' with pid 17551
+2025-08-27 15:26:23,450 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:24,240 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:25,243 INFO spawned: 'ai_agent_evaluator' with pid 17558
+2025-08-27 15:26:26,245 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:27,025 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:28,029 INFO spawned: 'ai_agent_evaluator' with pid 17563
+2025-08-27 15:26:29,031 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:29,824 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:30,827 INFO spawned: 'ai_agent_evaluator' with pid 17567
+2025-08-27 15:26:31,829 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:32,684 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:33,688 INFO spawned: 'ai_agent_evaluator' with pid 17572
+2025-08-27 15:26:34,690 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:35,443 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:36,447 INFO spawned: 'ai_agent_evaluator' with pid 17577
+2025-08-27 15:26:37,449 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:38,248 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:39,252 INFO spawned: 'ai_agent_evaluator' with pid 17582
+2025-08-27 15:26:40,254 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:41,625 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:42,628 INFO spawned: 'ai_agent_evaluator' with pid 17595
+2025-08-27 15:26:43,630 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:46,005 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:47,008 INFO spawned: 'ai_agent_evaluator' with pid 17617
+2025-08-27 15:26:48,010 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:49,881 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:50,884 INFO spawned: 'ai_agent_evaluator' with pid 17623
+2025-08-27 15:26:51,886 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:52,828 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:53,831 INFO spawned: 'ai_agent_evaluator' with pid 17628
+2025-08-27 15:26:54,833 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:55,683 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:56,687 INFO spawned: 'ai_agent_evaluator' with pid 17633
+2025-08-27 15:26:57,689 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:26:58,540 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:26:59,544 INFO spawned: 'ai_agent_evaluator' with pid 17638
+2025-08-27 15:27:00,546 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:01,478 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:02,482 INFO spawned: 'ai_agent_evaluator' with pid 17643
+2025-08-27 15:27:03,484 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:04,347 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:05,350 INFO spawned: 'ai_agent_evaluator' with pid 17655
+2025-08-27 15:27:06,352 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:08,413 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:09,417 INFO spawned: 'ai_agent_evaluator' with pid 17676
+2025-08-27 15:27:10,418 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:12,659 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:13,665 INFO spawned: 'ai_agent_evaluator' with pid 17684
+2025-08-27 15:27:14,667 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:15,930 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:16,934 INFO spawned: 'ai_agent_evaluator' with pid 17689
+2025-08-27 15:27:17,936 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:18,766 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:19,770 INFO spawned: 'ai_agent_evaluator' with pid 17694
+2025-08-27 15:27:20,772 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:22,612 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:23,615 INFO spawned: 'ai_agent_evaluator' with pid 17706
+2025-08-27 15:27:24,617 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:25,578 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:26,581 INFO spawned: 'ai_agent_evaluator' with pid 17727
+2025-08-27 15:27:27,582 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:29,399 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:30,404 INFO spawned: 'ai_agent_evaluator' with pid 17733
+2025-08-27 15:27:31,406 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:32,393 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:33,396 INFO spawned: 'ai_agent_evaluator' with pid 17740
+2025-08-27 15:27:34,398 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:35,576 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:36,579 INFO spawned: 'ai_agent_evaluator' with pid 17745
+2025-08-27 15:27:37,581 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:38,375 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:39,379 INFO spawned: 'ai_agent_evaluator' with pid 17756
+2025-08-27 15:27:40,381 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:41,232 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:42,235 INFO spawned: 'ai_agent_evaluator' with pid 17761
+2025-08-27 15:27:43,237 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:44,129 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:45,133 INFO spawned: 'ai_agent_evaluator' with pid 17772
+2025-08-27 15:27:46,135 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:48,121 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:49,125 INFO spawned: 'ai_agent_evaluator' with pid 17778
+2025-08-27 15:27:50,127 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:51,111 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:52,114 INFO spawned: 'ai_agent_evaluator' with pid 17789
+2025-08-27 15:27:53,116 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:54,997 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:56,001 INFO spawned: 'ai_agent_evaluator' with pid 17810
+2025-08-27 15:27:57,002 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:27:58,112 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:27:59,116 INFO spawned: 'ai_agent_evaluator' with pid 17816
+2025-08-27 15:28:00,118 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:02,209 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:03,214 INFO spawned: 'ai_agent_evaluator' with pid 17822
+2025-08-27 15:28:04,216 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:06,208 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:07,211 INFO spawned: 'ai_agent_evaluator' with pid 17828
+2025-08-27 15:28:08,214 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:09,187 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:10,192 INFO spawned: 'ai_agent_evaluator' with pid 17833
+2025-08-27 15:28:11,194 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:12,021 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:13,024 INFO spawned: 'ai_agent_evaluator' with pid 17845
+2025-08-27 15:28:14,026 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:15,813 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:16,817 INFO spawned: 'ai_agent_evaluator' with pid 17866
+2025-08-27 15:28:17,818 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:18,551 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:19,555 INFO spawned: 'ai_agent_evaluator' with pid 17872
+2025-08-27 15:28:20,557 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:21,321 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:22,325 INFO spawned: 'ai_agent_evaluator' with pid 17881
+2025-08-27 15:28:23,326 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:24,179 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:25,183 INFO spawned: 'ai_agent_evaluator' with pid 17885
+2025-08-27 15:28:26,185 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:26,961 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:27,965 INFO spawned: 'ai_agent_evaluator' with pid 17896
+2025-08-27 15:28:28,966 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:29,799 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:30,803 INFO spawned: 'ai_agent_evaluator' with pid 17901
+2025-08-27 15:28:31,805 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:32,561 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:33,565 INFO spawned: 'ai_agent_evaluator' with pid 17906
+2025-08-27 15:28:34,567 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:35,214 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:36,219 INFO spawned: 'ai_agent_evaluator' with pid 17916
+2025-08-27 15:28:37,221 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:37,943 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:38,947 INFO spawned: 'ai_agent_evaluator' with pid 17921
+2025-08-27 15:28:39,948 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:40,766 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:41,770 INFO spawned: 'ai_agent_evaluator' with pid 17932
+2025-08-27 15:28:42,772 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:43,581 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:44,584 INFO spawned: 'ai_agent_evaluator' with pid 17937
+2025-08-27 15:28:45,586 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:46,315 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:47,319 INFO spawned: 'ai_agent_evaluator' with pid 17941
+2025-08-27 15:28:48,320 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:49,993 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:50,996 INFO spawned: 'ai_agent_evaluator' with pid 17951
+2025-08-27 15:28:51,998 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:52,819 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:53,822 INFO spawned: 'ai_agent_evaluator' with pid 17967
+2025-08-27 15:28:54,824 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:55,640 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:55,643 INFO spawned: 'ai_agent_evaluator' with pid 17976
+2025-08-27 15:28:55,651 INFO waiting for ai_agent_evaluator to stop
+2025-08-27 15:28:55,652 WARN stopped: ai_agent_evaluator (terminated by SIGTERM)
+2025-08-27 15:28:55,656 INFO spawned: 'ai_agent_evaluator' with pid 17977
+2025-08-27 15:28:56,658 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:28:57,461 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:28:58,465 INFO spawned: 'ai_agent_evaluator' with pid 17981
+2025-08-27 15:28:59,466 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:00,197 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:01,200 INFO spawned: 'ai_agent_evaluator' with pid 17989
+2025-08-27 15:29:02,605 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:03,914 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:04,918 INFO spawned: 'ai_agent_evaluator' with pid 17998
+2025-08-27 15:29:05,920 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:06,571 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:07,575 INFO spawned: 'ai_agent_evaluator' with pid 18002
+2025-08-27 15:29:08,577 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:09,337 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:09,447 INFO spawned: 'ai_agent_evaluator' with pid 18010
+2025-08-27 15:29:10,462 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:12,101 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:13,105 INFO spawned: 'ai_agent_evaluator' with pid 18016
+2025-08-27 15:29:14,106 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:14,850 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:15,857 INFO spawned: 'ai_agent_evaluator' with pid 18021
+2025-08-27 15:29:16,858 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:17,812 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:18,816 INFO spawned: 'ai_agent_evaluator' with pid 18032
+2025-08-27 15:29:19,818 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:20,477 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:21,481 INFO spawned: 'ai_agent_evaluator' with pid 18036
+2025-08-27 15:29:22,482 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:23,315 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:24,318 INFO spawned: 'ai_agent_evaluator' with pid 18041
+2025-08-27 15:29:25,320 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:26,071 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:27,075 INFO spawned: 'ai_agent_evaluator' with pid 18046
+2025-08-27 15:29:28,077 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:28,740 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:29,744 INFO spawned: 'ai_agent_evaluator' with pid 18052
+2025-08-27 15:29:30,746 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:31,508 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:32,512 INFO spawned: 'ai_agent_evaluator' with pid 18057
+2025-08-27 15:29:33,514 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:34,221 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:35,225 INFO spawned: 'ai_agent_evaluator' with pid 18062
+2025-08-27 15:29:36,226 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:36,946 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:37,950 INFO spawned: 'ai_agent_evaluator' with pid 18067
+2025-08-27 15:29:38,952 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:39,606 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:40,609 INFO spawned: 'ai_agent_evaluator' with pid 18071
+2025-08-27 15:29:41,610 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:42,357 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:43,361 INFO spawned: 'ai_agent_evaluator' with pid 18076
+2025-08-27 15:29:44,362 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:45,032 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:46,036 INFO spawned: 'ai_agent_evaluator' with pid 18081
+2025-08-27 15:29:47,037 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:47,689 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:48,693 INFO spawned: 'ai_agent_evaluator' with pid 18085
+2025-08-27 15:29:49,695 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:50,439 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:51,443 INFO spawned: 'ai_agent_evaluator' with pid 18090
+2025-08-27 15:29:52,445 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:53,313 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:54,317 INFO spawned: 'ai_agent_evaluator' with pid 18095
+2025-08-27 15:29:55,319 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 15:29:56,045 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 15:29:57,048 INFO spawned: 'ai_agent_evaluator' with pid 18100
+2025-08-27 15:29:58,050 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

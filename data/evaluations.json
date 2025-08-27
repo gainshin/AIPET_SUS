@@ -2407,5 +2407,553 @@
     "id": "82eeb6eb",
     "created_at": "2025-08-27T14:59:10.268172",
     "updated_at": "2025-08-27T14:59:10.268172"
+  },
+  "7072d5fd": {
+    "project_info": {
+      "name": "AI interviewer agent",
+      "description": "aa",
+      "version": "aa",
+      "team": "aa"
+    },
+    "evaluation_date": "2025-08-27T15:14:23.344168",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "multi_modal": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "error_handling": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "emotional_intelligence": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "privacy_protection": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 7,
+          "One-dimensional": 0,
+          "Attractive": 0,
+          "Indifferent": 0,
+          "Reverse": 3,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 70.0,
+          "One-dimensional": 0.0,
+          "Attractive": 0.0,
+          "Indifferent": 0.0,
+          "Reverse": 30.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.0,
+        "average_dissatisfaction_impact": 0.55,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "personalization",
+            "multi_modal"
+          ],
+          "attractive_features": [],
+          "one_dimensional_features": []
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "High",
+          "category": "Must-be Needs",
+          "feature": "Context Memory",
+          "description": "Users consider Context Memory as a basic requirement, must prioritize ensuring its stability and reliability.",
+          "action": "Immediate improvement and ensure 100% reliability"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 37.5,
+      "grade": "F",
+      "percentile": 0.7343630955348343,
+      "adjective_rating": "Poor",
+      "acceptability": "Not Acceptable",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 37.5,
+          "grade": "F",
+          "percentile": 0.7343630955348343,
+          "adjective_rating": "Poor",
+          "acceptability": "Not Acceptable"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "I think that I would like to use this AI Agent system frequently",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "I found the system unnecessarily complex",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "I thought the system was easy to use",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "I think that I would need the support of a technical person to be able to use this system",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "I found the various functions in this system were well integrated",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "I thought there was too much inconsistency in this system",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "I would imagine that most people would learn to use this system very quickly",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "I found the system very cumbersome to use",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "I felt very confident using the system",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "I needed to learn a lot of things before I could get going with this system",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [
+          {
+            "priority": "高",
+            "area": "Interaction - Complexity Reduction",
+            "current_score": 0,
+            "suggestion": "Implement spectrum control from 'fully manual' to 'fully automatic' like cruise control. Design guided intent declaration interfaces that replace open-ended prompts with structured components (buttons, forms, dropdowns) to reduce cognitive load.",
+            "question": "I found the system unnecessarily complex"
+          },
+          {
+            "priority": "高",
+            "area": "Trust - Transparent Autonomy",
+            "current_score": 0,
+            "suggestion": "Build trust through transparency and recoverability. Implement visible reasoning processes and one-click undo functionality. Ensure 'Human at the helm' principle with clear task logs and the ability to intervene at any step.",
+            "question": "I think that I would need the support of a technical person to be able to use this system"
+          },
+          {
+            "priority": "高",
+            "area": "Experience - Consistency Across Modalities",
+            "current_score": 0,
+            "suggestion": "Ensure consistent experience across voice, visual, text, and touch interactions. Design for the continuous 'Sense-Think-Do' loop where AI maintains context and behavior consistency regardless of interaction mode.",
+            "question": "I thought there was too much inconsistency in this system"
+          },
+          {
+            "priority": "高",
+            "area": "Agency - Capability Boundaries",
+            "current_score": 0,
+            "suggestion": "Clearly define agent capability boundaries using 'behavior + triggers + exceptions' patterns. Provide batch processing interfaces for repetitive tasks, allowing users to manage hundreds of AI-executed micro-tasks efficiently.",
+            "question": "I found the system very cumbersome to use"
+          },
+          {
+            "priority": "高",
+            "area": "Privacy - Contextual Authorization",
+            "current_score": 0,
+            "suggestion": "Embed privacy controls within interactions. When AI needs permissions (calendar access, contacts), request authorization in context rather than in buried settings pages. Design 'just enough friction' for trust building.",
+            "question": "I needed to learn a lot of things before I could get going with this system"
+          }
+        ],
+        "benchmark_comparison": {
+          "your_score": 37.5,
+          "industry_average": 68.0,
+          "difference_from_average": -30.5,
+          "percentile": 0.7343630955348343,
+          "better_than_percent": 0.7343630955348343,
+          "benchmark_category": "Needs Improvement (Bottom 25%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "容易使用",
+          "功能整合良好",
+          "容易學習",
+          "用戶信心足"
+        ],
+        "weaknesses": [
+          "系統過於複雜",
+          "需要技術支援",
+          "系統不一致",
+          "使用複雜",
+          "學習成本高"
+        ]
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 41.25,
+      "maturity_level": "Very Poor - Critical Issues",
+      "key_strengths": [],
+      "critical_issues": [
+        "Severely insufficient usability",
+        "Too many unmet basic requirements"
+      ],
+      "priority_actions": [
+        "Immediately improve system usability",
+        "Prioritize meeting basic requirements"
+      ]
+    },
+    "id": "7072d5fd",
+    "created_at": "2025-08-27T15:14:23.344290",
+    "updated_at": "2025-08-27T15:14:23.344290"
+  },
+  "173a7aa5": {
+    "project_info": {
+      "name": "AI interviewer agent",
+      "description": "aa",
+      "version": "aa",
+      "team": "aa"
+    },
+    "evaluation_date": "2025-08-27T15:21:38.186233",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "response_speed": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.5,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "context_memory": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "personalization": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "learning_ability": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "emotional_intelligence": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_protection": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 0,
+          "One-dimensional": 0,
+          "Attractive": 0,
+          "Indifferent": 10,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 0.0,
+          "One-dimensional": 0.0,
+          "Attractive": 0.0,
+          "Indifferent": 100.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.0,
+        "average_dissatisfaction_impact": 0.0,
+        "priority_features": {
+          "must_be_features": [],
+          "attractive_features": [],
+          "one_dimensional_features": []
+        }
+      },
+      "recommendations": []
+    },
+    "sus_evaluation": {
+      "score": 45.0,
+      "grade": "F",
+      "percentile": 3.288411865916389,
+      "adjective_rating": "OK",
+      "acceptability": "Not Acceptable",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 45.0,
+          "grade": "F",
+          "percentile": 3.288411865916389,
+          "adjective_rating": "OK",
+          "acceptability": "Not Acceptable"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "I think that I would like to use this AI Agent system frequently",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "Good",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "I found the system unnecessarily complex",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "Average",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "I thought the system was easy to use",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "Good",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "I think that I would need the support of a technical person to be able to use this system",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "Average",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "I found the various functions in this system were well integrated",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "I thought there was too much inconsistency in this system",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "Good",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "I would imagine that most people would learn to use this system very quickly",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "I found the system very cumbersome to use",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "Average",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "I felt very confident using the system",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "I needed to learn a lot of things before I could get going with this system",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "Needs Improvement",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [
+          {
+            "priority": "中",
+            "area": "Interaction - Complexity Reduction",
+            "current_score": 1,
+            "suggestion": "Implement spectrum control from 'fully manual' to 'fully automatic' like cruise control. Design guided intent declaration interfaces that replace open-ended prompts with structured components (buttons, forms, dropdowns) to reduce cognitive load.",
+            "question": "I found the system unnecessarily complex"
+          },
+          {
+            "priority": "中",
+            "area": "Trust - Transparent Autonomy",
+            "current_score": 1,
+            "suggestion": "Build trust through transparency and recoverability. Implement visible reasoning processes and one-click undo functionality. Ensure 'Human at the helm' principle with clear task logs and the ability to intervene at any step.",
+            "question": "I think that I would need the support of a technical person to be able to use this system"
+          },
+          {
+            "priority": "中",
+            "area": "Agency - Capability Boundaries",
+            "current_score": 1,
+            "suggestion": "Clearly define agent capability boundaries using 'behavior + triggers + exceptions' patterns. Provide batch processing interfaces for repetitive tasks, allowing users to manage hundreds of AI-executed micro-tasks efficiently.",
+            "question": "I found the system very cumbersome to use"
+          },
+          {
+            "priority": "高",
+            "area": "Privacy - Contextual Authorization",
+            "current_score": 0,
+            "suggestion": "Embed privacy controls within interactions. When AI needs permissions (calendar access, contacts), request authorization in context rather than in buried settings pages. Design 'just enough friction' for trust building.",
+            "question": "I needed to learn a lot of things before I could get going with this system"
+          }
+        ],
+        "benchmark_comparison": {
+          "your_score": 45.0,
+          "industry_average": 68.0,
+          "difference_from_average": -23.0,
+          "percentile": 3.288411865916389,
+          "better_than_percent": 3.288411865916389,
+          "benchmark_category": "Needs Improvement (Bottom 25%)"
+        },
+        "strengths": [
+          "功能整合良好",
+          "容易學習",
+          "用戶信心足"
+        ],
+        "weaknesses": [
+          "系統過於複雜",
+          "需要技術支援",
+          "使用複雜",
+          "學習成本高"
+        ]
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 46.5,
+      "maturity_level": "Very Poor - Critical Issues",
+      "key_strengths": [
+        "Stable basic functionality"
+      ],
+      "critical_issues": [
+        "Severely insufficient usability"
+      ],
+      "priority_actions": [
+        "Immediately improve system usability"
+      ]
+    },
+    "id": "173a7aa5",
+    "created_at": "2025-08-27T15:21:38.186443",
+    "updated_at": "2025-08-27T15:21:38.186443"
   }
 }

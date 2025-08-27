@@ -659,3 +659,161 @@ body {
         transform: translateY(0);
     }
 }
+
+/* AIPET Questions Styles */
+.aipet-dimension-group {
+    margin-bottom: 30px;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dimension-header {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    color: white;
+    padding: 15px 20px;
+}
+
+.dimension-header h5 {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aipet-question {
+    border-top: 1px solid #F3F4F6;
+    background: #FAFAFA;
+    margin: 0;
+    border-radius: 0;
+}
+
+.aipet-question:first-child {
+    border-top: none;
+}
+
+.aipet-textarea-wrapper {
+    margin-top: 15px;
+}
+
+.aipet-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.aipet-textarea:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.aipet-textarea::placeholder {
+    color: #9CA3AF;
+    font-style: italic;
+}
+
+.textarea-helper {
+    margin-top: 8px;
+}
+
+.question-meta {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #F3F4F6;
+}
+
+.aipet-progress {
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.aipet-progress span {
+    font-weight: 500;
+}
+
+/* AIPET Results Display */
+.aipet-insights {
+    margin-top: 30px;
+}
+
+.insight-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: white;
+}
+
+.insight-card.positive {
+    border-left: 4px solid #10B981;
+    background: #F0FDF4;
+}
+
+.insight-card.neutral {
+    border-left: 4px solid #F59E0B;
+    background: #FFFBEB;
+}
+
+.insight-card.suggestion {
+    border-left: 4px solid #8B5CF6;
+    background: #FAF5FF;
+}
+
+.insight-title {
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dimension-coverage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.coverage-item {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background: white;
+}
+
+.coverage-percentage {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8B5CF6;
+    margin-bottom: 5px;
+}
+
+.coverage-label {
+    font-size: 12px;
+    color: #6B7280;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Additional AIPET styles */
+.progress-bar.bg-purple {
+    background-color: #8B5CF6;
+}
+
+.text-purple {
+    color: #8B5CF6;
+}

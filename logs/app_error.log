@@ -13,3 +13,30 @@
 10.12.253.40 - - [27/Aug/2025 14:03:20] "GET /api/kano/questions HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:03:20] "GET /api/sus/questions HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:03:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:04:30] "GET /api/health HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:30] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:36] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:36] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "GET /api/health HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "GET /api/evaluation/1f1cfbd7 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:04:55] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:05:04] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:05:09] "GET /api/evaluation/1f1cfbd7 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:07:55] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:07:56] "GET /api/evaluation/6a9225e6 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:08:46] "GET /api/health HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:09:51] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:09:53] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:09:53] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:09:53] "GET /static/css/dashboard.css HTTP/1.1" 200 -

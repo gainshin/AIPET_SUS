@@ -1,1 +1,530 @@
-{}
+{
+  "6a9225e6": {
+    "project_info": {
+      "name": "interview agent",
+      "description": "interview agent",
+      "version": "1",
+      "team": "none"
+    },
+    "evaluation_date": "2025-08-27T14:04:36.985134",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "multi_modal": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "error_handling": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "emotional_intelligence": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "privacy_protection": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 9,
+          "One-dimensional": 0,
+          "Attractive": 0,
+          "Indifferent": 0,
+          "Reverse": 1,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 90.0,
+          "One-dimensional": 0.0,
+          "Attractive": 0.0,
+          "Indifferent": 0.0,
+          "Reverse": 10.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.0,
+        "average_dissatisfaction_impact": 0.85,
+        "priority_features": {
+          "must_be_features": [
+            "response_accuracy",
+            "natural_conversation",
+            "context_memory"
+          ],
+          "attractive_features": [],
+          "one_dimensional_features": []
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "回應準確性",
+          "description": "用戶認為回應準確性是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 47.5,
+      "grade": "F",
+      "percentile": 5.050258347410371,
+      "adjective_rating": "差",
+      "acceptability": "不可接受",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 47.5,
+          "grade": "F",
+          "percentile": 5.050258347410371,
+          "adjective_rating": "差",
+          "acceptability": "不可接受"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "普通",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "需要改進",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "需要改進",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "需要改進",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 5,
+            "normalized_score": 0,
+            "performance": "需要改進",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [
+          {
+            "priority": "中",
+            "area": "系統複雜性",
+            "current_score": 1,
+            "suggestion": "簡化用戶界面和交互流程，降低系統複雜度",
+            "question": "我覺得這個系統過於複雜"
+          },
+          {
+            "priority": "高",
+            "area": "獨立使用性",
+            "current_score": 0,
+            "suggestion": "完善幫助文檔和引導功能，降低技術門檻",
+            "question": "我需要技術人員的協助才能使用這個系統"
+          },
+          {
+            "priority": "高",
+            "area": "一致性",
+            "current_score": 0,
+            "suggestion": "建立清晰的設計規範，確保界面和交互的一致性",
+            "question": "我覺得這個系統有太多不一致的地方"
+          },
+          {
+            "priority": "高",
+            "area": "使用難度",
+            "current_score": 0,
+            "suggestion": "重新設計複雜的功能，提供更簡單的替代方案",
+            "question": "我覺得這個系統很難使用"
+          },
+          {
+            "priority": "高",
+            "area": "學習成本",
+            "current_score": 0,
+            "suggestion": "減少預備知識要求，提供更好的上手體驗",
+            "question": "在使用這個系統之前，我需要先學習很多東西"
+          }
+        ],
+        "benchmark_comparison": {
+          "your_score": 47.5,
+          "industry_average": 68.0,
+          "difference_from_average": -20.5,
+          "percentile": 5.050258347410371,
+          "better_than_percent": 5.050258347410371,
+          "benchmark_category": "需要改進 (後25%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "容易使用",
+          "功能整合良好",
+          "容易學習",
+          "用戶信心足"
+        ],
+        "weaknesses": [
+          "系統過於複雜",
+          "需要技術支援",
+          "系統不一致",
+          "使用複雜",
+          "學習成本高"
+        ]
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 48.25,
+      "maturity_level": "極差 - 重大問題",
+      "key_strengths": [],
+      "critical_issues": [
+        "可用性嚴重不足",
+        "過多基礎型需求未滿足",
+        "用戶不滿意度風險高"
+      ],
+      "priority_actions": [
+        "立即改善系統可用性",
+        "優先滿足基礎型需求"
+      ]
+    },
+    "id": "6a9225e6",
+    "created_at": "2025-08-27T14:04:36.985245",
+    "updated_at": "2025-08-27T14:04:36.985245"
+  },
+  "1f1cfbd7": {
+    "project_info": {
+      "name": "API測試項目",
+      "description": "用於測試API的示例項目",
+      "version": "v1.0.0",
+      "team": "測試團隊"
+    },
+    "evaluation_date": "2025-08-27T14:04:55.605101",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.0
+        },
+        "natural_conversation": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "context_memory": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.5,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "emotional_intelligence": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_protection": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 3,
+          "One-dimensional": 0,
+          "Attractive": 0,
+          "Indifferent": 7,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 30.0,
+          "One-dimensional": 0.0,
+          "Attractive": 0.0,
+          "Indifferent": 70.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.06000000000000001,
+        "average_dissatisfaction_impact": 0.3,
+        "priority_features": {
+          "must_be_features": [
+            "response_accuracy",
+            "error_handling",
+            "privacy_protection"
+          ],
+          "attractive_features": [],
+          "one_dimensional_features": []
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "回應準確性",
+          "description": "用戶認為回應準確性是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 75.0,
+      "grade": "C",
+      "percentile": 71.2260281150973,
+      "adjective_rating": "好",
+      "acceptability": "可接受",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 75.0,
+          "grade": "C",
+          "percentile": 71.2260281150973,
+          "adjective_rating": "好",
+          "acceptability": "可接受"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 75.0,
+          "industry_average": 68.0,
+          "difference_from_average": 7.0,
+          "percentile": 71.2260281150973,
+          "better_than_percent": 71.2260281150973,
+          "benchmark_category": "中上 (前50%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 68.4,
+      "maturity_level": "中等 - 需要改進",
+      "key_strengths": [],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "1f1cfbd7",
+    "created_at": "2025-08-27T14:04:55.605219",
+    "updated_at": "2025-08-27T14:04:55.605219"
+  }
+}

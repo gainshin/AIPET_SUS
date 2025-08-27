@@ -3,253 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agent 可用性評估工具</title>
+    <title>AIPET - Kano-SUS Evaluator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- 導航欄 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-robot"></i>
-                AI Agent 可用性評估工具
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">關於工具</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#evaluation">開始評估</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showHistory()">評估記錄</a>
-                    </li>
-                </ul>
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <h2>AIPET</h2>
+                <p>Kano-SUS Evaluator</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" onclick="showDashboard()">
+                    <i class="bi bi-house"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" onclick="showNewProject()">
+                    <i class="bi bi-plus-circle"></i>
+                    New Project
+                </a>
+                <a href="#" class="nav-item" onclick="showHistory()">
+                    <i class="bi bi-clock-history"></i>
+                    History
+                </a>
+                <a href="#" class="nav-item" onclick="showSettings()">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-user">
+                <div class="user-info">
+                    <i class="bi bi-person-circle"></i>
+                    <span>AI Researcher</span>
+                </div>
+                <a href="#" class="logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </a>
             </div>
         </div>
-    </nav>
 
-    <!-- 主要內容區域 -->
-    <div class="container mt-4">
-        <!-- 歡迎區域 -->
-        <div id="welcomeSection" class="welcome-section">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4 fw-bold text-primary mb-4">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        AI Agent 可用性評估工具
-                    </h1>
-                    <p class="lead mb-4">
-                        結合 Kano 模型和 SUS 量表，為 AI 開發者提供科學、全面的用戶體驗評估
-                    </p>
-                    <div class="row mt-5">
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-diagram-3 text-primary fs-1"></i>
-                                <h3>Kano 模型分析</h3>
-                                <p>深入了解用戶需求類型，識別基礎型、期望型和魅力型功能</p>
-                            </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <p class="welcome-text">Welcome back, AI Researcher!</p>
+            </div>
+            <!-- Dashboard Stats -->
+            <div id="dashboardSection" class="dashboard-section">
+                <div class="stats-grid">
+                    <div class="stat-card stat-yellow">
+                        <div class="stat-content">
+                            <h3>Total<br>Assessments</h3>
+                            <div class="stat-number" id="totalAssessments">0</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-speedometer2 text-success fs-1"></i>
-                                <h3>SUS 量表測評</h3>
-                                <p>標準化可用性評估，提供準確的系統可用性分數</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-card">
-                                <i class="bi bi-file-earmark-text text-warning fs-1"></i>
-                                <h3>詳細分析報告</h3>
-                                <p>生成專業的PDF評估報告，包含改進建議和實施路線圖</p>
-                            </div>
+                        <div class="stat-icon">
+                            <i class="bi bi-graph-up"></i>
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-lg mt-4" onclick="startEvaluation()">
-                        <i class="bi bi-play-circle"></i>
-                        開始評估
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 項目信息表單 -->
-        <div id="projectInfoSection" class="evaluation-section" style="display: none;">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card shadow">
-                        <div class="card-header bg-primary text-white">
-                            <h3 class="mb-0">
-                                <i class="bi bi-info-circle"></i>
-                                步驟 1: 項目基本信息
-                            </h3>
+                    
+                    <div class="stat-card stat-blue">
+                        <div class="stat-content">
+                            <h3>Avg. SUS Score</h3>
+                            <div class="stat-number" id="avgSusScore">N/A</div>
                         </div>
-                        <div class="card-body">
-                            <form id="projectInfoForm">
-                                <div class="mb-3">
-                                    <label for="projectName" class="form-label">項目名稱 *</label>
-                                    <input type="text" class="form-control" id="projectName" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="projectDescription" class="form-label">項目描述</label>
-                                    <textarea class="form-control" id="projectDescription" rows="3" 
-                                              placeholder="簡要描述您的AI Agent的主要功能和用途"></textarea>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for="projectVersion" class="form-label">版本號</label>
-                                            <input type="text" class="form-control" id="projectVersion" placeholder="v1.0.0">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for="projectTeam" class="form-label">開發團隊</label>
-                                            <input type="text" class="form-control" id="projectTeam" placeholder="團隊或公司名稱">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <button type="button" class="btn btn-secondary" onclick="showWelcome()">
-                                        <i class="bi bi-arrow-left"></i>
-                                        返回
-                                    </button>
-                                    <button type="submit" class="btn btn-primary">
-                                        下一步
-                                        <i class="bi bi-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </form>
+                        <div class="stat-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-green">
+                        <div class="stat-content">
+                            <h3>Active Projects</h3>
+                            <div class="stat-number" id="activeProjects">1</div>
+                        </div>
+                        <div class="stat-icon">
+                            <i class="bi bi-graph-up"></i>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Kano模型評估 -->
-        <div id="kanoEvaluationSection" class="evaluation-section" style="display: none;">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card shadow">
-                        <div class="card-header bg-success text-white">
-                            <h3 class="mb-0">
-                                <i class="bi bi-diagram-3"></i>
-                                步驟 2: Kano 模型評估
-                            </h3>
-                            <p class="mb-0 mt-2">
-                                針對每個功能，請分別回答當該功能<strong>存在</strong>和<strong>不存在</strong>時您的感受
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <div id="kanoQuestions"></div>
-                            <div class="d-flex justify-content-between mt-4">
-                                <button type="button" class="btn btn-secondary" onclick="showProjectInfo()">
-                                    <i class="bi bi-arrow-left"></i>
-                                    上一步
-                                </button>
-                                <button type="button" class="btn btn-success" onclick="submitKanoEvaluation()">
-                                    下一步
-                                    <i class="bi bi-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
+                <!-- Projects Section -->
+                <div class="projects-section">
+                    <div class="section-header">
+                        <h2>My AI Agent Projects</h2>
+                        <button class="create-btn" onclick="showNewProject()">
+                            <i class="bi bi-plus"></i>
+                            Create New Project
+                        </button>
+                    </div>
+                    
+                    <div class="projects-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Created Date</th>
+                                    <th>Assessments</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="projectsTableBody">
+                                <!-- Projects will be populated here -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- SUS量表評估 -->
-        <div id="susEvaluationSection" class="evaluation-section" style="display: none;">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card shadow">
-                        <div class="card-header bg-warning text-dark">
-                            <h3 class="mb-0">
-                                <i class="bi bi-speedometer2"></i>
-                                步驟 3: SUS 量表評估
-                            </h3>
-                            <p class="mb-0 mt-2">
-                                請根據您使用該AI Agent的實際體驗，對以下陳述表達您的同意程度
-                            </p>
+            <!-- New Project Form -->
+            <div id="newProjectSection" class="dashboard-section" style="display: none;">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Create New AI Agent Project</h2>
+                        <p>Set up your AI agent evaluation project</p>
+                    </div>
+                    
+                    <form id="projectInfoForm" class="project-form">
+                        <div class="form-group">
+                            <label for="projectName">Project Name *</label>
+                            <input type="text" id="projectName" class="form-control" required 
+                                   placeholder="Enter your AI agent project name">
                         </div>
-                        <div class="card-body">
-                            <div id="susQuestions"></div>
-                            <div class="d-flex justify-content-between mt-4">
-                                <button type="button" class="btn btn-secondary" onclick="showKanoEvaluation()">
-                                    <i class="bi bi-arrow-left"></i>
-                                    上一步
-                                </button>
-                                <button type="button" class="btn btn-warning" onclick="submitSUSEvaluation()">
-                                    完成評估
-                                    <i class="bi bi-check-circle"></i>
-                                </button>
+                        
+                        <div class="form-group">
+                            <label for="projectDescription">Description</label>
+                            <textarea id="projectDescription" class="form-control" rows="4" 
+                                      placeholder="Describe your AI agent's main functions and purpose"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="projectVersion">Version</label>
+                                <input type="text" id="projectVersion" class="form-control" placeholder="v1.0.0">
                             </div>
+                            <div class="form-group">
+                                <label for="projectTeam">Development Team</label>
+                                <input type="text" id="projectTeam" class="form-control" placeholder="Team or Company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="showDashboard()">
+                                <i class="bi bi-arrow-left"></i>
+                                Back to Dashboard
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                Continue to Assessment
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Kano Assessment -->
+            <div id="kanoEvaluationSection" class="dashboard-section" style="display: none;">
+                <div class="assessment-card">
+                    <div class="assessment-header">
+                        <h3>
+                            <i class="bi bi-diagram-3"></i>
+                            Step 2: Kano Model Assessment
+                        </h3>
+                        <p>For each feature, please answer how you feel when the feature <strong>exists</strong> and when it <strong>doesn't exist</strong></p>
+                    </div>
+                    <div class="assessment-body">
+                        <div id="kanoQuestions"></div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="showNewProject()">
+                                <i class="bi bi-arrow-left"></i>
+                                Previous Step
+                            </button>
+                            <button type="button" class="btn-primary" onclick="submitKanoEvaluation()">
+                                Next Step
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 評估結果 -->
-        <div id="resultsSection" class="evaluation-section" style="display: none;">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card shadow">
-                        <div class="card-header bg-info text-white">
-                            <h3 class="mb-0">
-                                <i class="bi bi-graph-up"></i>
-                                評估結果分析
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <div id="evaluationResults"></div>
-                            <div class="mt-4 text-center">
-                                <button type="button" class="btn btn-primary me-2" onclick="downloadReport()">
-                                    <i class="bi bi-download"></i>
-                                    下載PDF報告
-                                </button>
-                                <button type="button" class="btn btn-success me-2" onclick="startNewEvaluation()">
-                                    <i class="bi bi-plus-circle"></i>
-                                    新評估
-                                </button>
-                                <button type="button" class="btn btn-secondary" onclick="showHistory()">
-                                    <i class="bi bi-clock-history"></i>
-                                    評估記錄
-                                </button>
-                            </div>
+            <!-- SUS Assessment -->
+            <div id="susEvaluationSection" class="dashboard-section" style="display: none;">
+                <div class="assessment-card">
+                    <div class="assessment-header" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);">
+                        <h3>
+                            <i class="bi bi-speedometer2"></i>
+                            Step 3: SUS Scale Assessment
+                        </h3>
+                        <p>Based on your actual experience using this AI Agent, please express your agreement with the following statements</p>
+                    </div>
+                    <div class="assessment-body">
+                        <div id="susQuestions"></div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="showKanoEvaluation()">
+                                <i class="bi bi-arrow-left"></i>
+                                Previous Step
+                            </button>
+                            <button type="button" class="btn-primary" onclick="submitSUSEvaluation()">
+                                Complete Assessment
+                                <i class="bi bi-check-circle"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 評估歷史 -->
-        <div id="historySection" class="evaluation-section" style="display: none;">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card shadow">
-                        <div class="card-header bg-secondary text-white">
-                            <h3 class="mb-0">
-                                <i class="bi bi-clock-history"></i>
-                                評估記錄
-                            </h3>
+            <!-- Results Section -->
+            <div id="resultsSection" class="dashboard-section" style="display: none;">
+                <div class="assessment-card">
+                    <div class="assessment-header" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                        <h3>
+                            <i class="bi bi-graph-up"></i>
+                            Assessment Results Analysis
+                        </h3>
+                    </div>
+                    <div class="assessment-body">
+                        <div id="evaluationResults"></div>
+                        <div class="form-actions" style="justify-content: center; gap: 20px;">
+                            <button type="button" class="btn-primary" onclick="downloadReport()">
+                                <i class="bi bi-download"></i>
+                                Download PDF Report
+                            </button>
+                            <button type="button" class="btn-primary" onclick="showNewProject()">
+                                <i class="bi bi-plus-circle"></i>
+                                New Assessment
+                            </button>
+                            <button type="button" class="btn-secondary" onclick="showDashboard()">
+                                <i class="bi bi-house"></i>
+                                Back to Dashboard
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <div id="evaluationHistory"></div>
-                            <div class="mt-4 text-center">
-                                <button type="button" class="btn btn-primary" onclick="showWelcome()">
-                                    <i class="bi bi-house"></i>
-                                    返回首頁
-                                </button>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div id="historySection" class="dashboard-section" style="display: none;">
+                <div class="projects-section">
+                    <div class="section-header">
+                        <h2>Assessment History</h2>
+                        <button class="create-btn" onclick="showNewProject()">
+                            <i class="bi bi-plus"></i>
+                            New Assessment
+                        </button>
+                    </div>
+                    <div class="projects-table">
+                        <div id="evaluationHistory"></div>
                     </div>
                 </div>
             </div>

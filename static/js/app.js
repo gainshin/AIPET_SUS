@@ -684,52 +684,9 @@ async function showHistory() {
     }
 }
 
-// 渲染歷史記錄
+// 這個函數已經被 renderHistoryTable 替代，保留以防向後兼容
 function renderHistory(evaluations) {
-    const container = document.getElementById('evaluationHistory');
-    
-    if (evaluations.length === 0) {
-        container.innerHTML = `
-            <div class="text-center py-5">
-                <i class="bi bi-inbox display-1 text-muted"></i>
-                <h3 class="mt-3 text-muted">暫無評估記錄</h3>
-                <p class="text-muted">開始您的第一次AI Agent可用性評估吧！</p>
-                <button class="btn btn-primary" onclick="startEvaluation()">
-                    <i class="bi bi-plus-circle"></i>
-                    開始評估
-                </button>
-            </div>
-        `;
-        return;
-    }
-    
-    container.innerHTML = evaluations.map(evaluation => {
-        const project = evaluation.project_info || {};
-        const sus = evaluation.sus_evaluation || {};
-        const overall = evaluation.overall_assessment || {};
-        const date = new Date(evaluation.created_at).toLocaleDateString('zh-TW');
-        
-        return `
-            <div class="history-item" onclick="viewEvaluation('${evaluation.id}')">
-                <h5>${project.name || '未命名項目'}</h5>
-                <p class="text-muted">${project.description || '無描述'}</p>
-                <div class="history-scores">
-                    <span class="score-badge ${getScoreBadgeClass(sus.score)}">
-                        SUS: ${sus.score ? sus.score.toFixed(1) : 'N/A'}
-                    </span>
-                    <span class="score-badge ${getScoreBadgeClass(overall.overall_score)}">
-                        綜合: ${overall.overall_score ? overall.overall_score.toFixed(1) : 'N/A'}
-                    </span>
-                    <span class="badge bg-secondary">${overall.maturity_level || 'N/A'}</span>
-                </div>
-                <div class="history-meta">
-                    <i class="bi bi-calendar"></i> ${date}
-                    <i class="bi bi-person ms-3"></i> ${project.team || '未知團隊'}
-                    <i class="bi bi-tag ms-3"></i> ${project.version || 'N/A'}
-                </div>
-            </div>
-        `;
-    }).join('');
+    renderHistoryTable(evaluations);
 }
 
 // 查看評估詳情

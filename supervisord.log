@@ -28,3 +28,58 @@
 2025-08-27 14:41:52,825 INFO stopped: ai_agent_evaluator (exit status 0)
 2025-08-27 14:41:52,829 INFO spawned: 'ai_agent_evaluator' with pid 10953
 2025-08-27 14:41:53,831 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 14:44:24,632 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:44:25,635 INFO spawned: 'ai_agent_evaluator' with pid 11313
+2025-08-27 14:44:25,946 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:44:26,949 INFO spawned: 'ai_agent_evaluator' with pid 11340
+2025-08-27 14:44:27,253 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:44:29,257 INFO spawned: 'ai_agent_evaluator' with pid 11348
+2025-08-27 14:44:29,568 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:44:32,574 INFO spawned: 'ai_agent_evaluator' with pid 11355
+2025-08-27 14:44:32,909 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:44:33,911 INFO gave up: ai_agent_evaluator entered FATAL state, too many start retries too quickly
+2025-08-27 14:47:05,666 INFO spawned: 'ai_agent_evaluator' with pid 11912
+2025-08-27 14:47:07,029 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 14:47:07,029 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:07,031 INFO spawned: 'ai_agent_evaluator' with pid 11949
+2025-08-27 14:47:08,401 INFO success: ai_agent_evaluator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-27 14:47:08,401 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:09,404 INFO spawned: 'ai_agent_evaluator' with pid 11963
+2025-08-27 14:47:09,720 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:10,724 INFO spawned: 'ai_agent_evaluator' with pid 11965
+2025-08-27 14:47:10,979 CRIT Handling XML-RPC request with data "<?xml version='1.0'?>\n<methodCall>\n<methodName>supervisor.readProcessStderrLog</methodName>\n<params>\n<param>\n<value><string>ai_agent_evaluator</string></value>\n</param>\n<param>\n<value><int>-1600</int></value>\n</param>\n<param>\n<value><int>0</int></value>\n</param>\n</params>\n</methodCall>\n" raised an unexpected exception: Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/supervisor/rpcinterface.py", line 716, in _readProcessLog
+    return as_string(readFile(logfile, int(offset), int(length)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/supervisor/compat.py", line 60, in as_string
+    return s.decode(encoding)
+           ^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9c in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/supervisor/xmlrpc.py", line 410, in continue_request
+    value = self.call(method, params)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/supervisor/xmlrpc.py", line 446, in call
+    return traverse(self.rpcinterface, method, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/supervisor/xmlrpc.py", line 469, in traverse
+    return func(*params)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/supervisor/rpcinterface.py", line 743, in readProcessStderrLog
+    return self._readProcessLog(name, offset, length, 'stderr')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/supervisor/rpcinterface.py", line 719, in _readProcessLog
+    raise RPCError(getattr(Faults, why))
+                   ^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Faults' has no attribute 'utf-8'
+
+2025-08-27 14:47:11,038 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:13,043 INFO spawned: 'ai_agent_evaluator' with pid 11971
+2025-08-27 14:47:13,355 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:16,361 INFO spawned: 'ai_agent_evaluator' with pid 11978
+2025-08-27 14:47:16,666 WARN exited: ai_agent_evaluator (exit status 1; not expected)
+2025-08-27 14:47:17,668 INFO gave up: ai_agent_evaluator entered FATAL state, too many start retries too quickly
+2025-08-27 14:47:53,229 WARN received SIGTERM indicating exit request

@@ -496,7 +496,7 @@ function renderRecommendations(evaluation) {
     
     return `
         <div class="result-card">
-            <h4><i class="bi bi-lightbulb text-primary"></i> 改進建議</h4>
+            <h4><i class="bi bi-lightbulb text-primary"></i> Improvement Recommendations</h4>
             <ul class="recommendation-list">
                 ${allRecommendations.slice(0, 6).map(rec => `
                     <li class="recommendation-item ${rec.priority.toLowerCase()}-priority">
@@ -505,7 +505,7 @@ function renderRecommendations(evaluation) {
                             <span class="badge bg-${getPriorityBadgeColor(rec.priority)}">${rec.priority}優先級</span>
                         </div>
                         <p class="mb-1">${rec.suggestion || rec.description}</p>
-                        ${rec.action ? `<small class="text-muted">建議行動: ${rec.action}</small>` : ''}
+                        ${rec.action ? `<small class="text-muted">Recommended Action: ${rec.action}</small>` : ''}
                     </li>
                 `).join('')}
             </ul>
@@ -513,22 +513,22 @@ function renderRecommendations(evaluation) {
     `;
 }
 
-// 渲染綜合評估
+// Render overall assessment
 function renderOverallAssessment(overall) {
     return `
         <div class="result-card">
-            <h4><i class="bi bi-graph-up text-info"></i> 綜合評估</h4>
+            <h4><i class="bi bi-graph-up text-info"></i> Overall Assessment</h4>
             <div class="mb-3">
-                <h5>成熟度等級</h5>
+                <h5>Maturity Level</h5>
                 <div class="alert alert-${getMaturityAlertColor(overall.overall_score)}">
                     <strong>${overall.maturity_level}</strong><br>
-                    綜合分數: ${overall.overall_score.toFixed(1)}/100
+                    Overall Score: ${overall.overall_score.toFixed(1)}/100
                 </div>
             </div>
             
             ${overall.key_strengths.length > 0 ? `
                 <div class="mb-3">
-                    <h6><i class="bi bi-check-circle text-success"></i> 關鍵優勢</h6>
+                    <h6><i class="bi bi-check-circle text-success"></i> Key Strengths</h6>
                     <ul class="list-unstyled">
                         ${overall.key_strengths.map(strength => `<li>✓ ${strength}</li>`).join('')}
                     </ul>
@@ -537,7 +537,7 @@ function renderOverallAssessment(overall) {
             
             ${overall.critical_issues.length > 0 ? `
                 <div class="mb-3">
-                    <h6><i class="bi bi-exclamation-triangle text-danger"></i> 關鍵問題</h6>
+                    <h6><i class="bi bi-exclamation-triangle text-danger"></i> Critical Issues</h6>
                     <ul class="list-unstyled">
                         ${overall.critical_issues.map(issue => `<li>⚠ ${issue}</li>`).join('')}
                     </ul>
@@ -546,7 +546,7 @@ function renderOverallAssessment(overall) {
             
             ${overall.priority_actions.length > 0 ? `
                 <div>
-                    <h6><i class="bi bi-list-check text-primary"></i> 優先行動</h6>
+                    <h6><i class="bi bi-list-check text-primary"></i> Priority Actions</h6>
                     <ol>
                         ${overall.priority_actions.map(action => `<li>${action}</li>`).join('')}
                     </ol>

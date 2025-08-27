@@ -363,3 +363,93 @@
 10.12.253.40 - - [27/Aug/2025 14:42:09] "GET /api/evaluations HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:42:09] "GET /api/evaluations HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:42:16] "GET /api/evaluation/e97937b9 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:49] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:51] "GET /api/evaluation/e97937b9 HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/user/webapp/app.py", line 16, in <module>
+    from models.kano_model import KanoModelEvaluator, KanoCategory
+  File "/home/user/webapp/models/kano_model.py", line 125
+    "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
+                ^
+SyntaxError: invalid syntax

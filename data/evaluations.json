@@ -1859,5 +1859,270 @@
     "id": "e97937b9",
     "created_at": "2025-08-27T14:41:58.453944",
     "updated_at": "2025-08-27T14:41:58.453944"
+  },
+  "77921f35": {
+    "project_info": {
+      "name": "Voice Assistant Test",
+      "description": "Smart voice-controlled AI assistant with natural language processing",
+      "version": "3.1.0",
+      "team": "Voice Technology Team"
+    },
+    "evaluation_date": "2025-08-27T14:50:07.516909",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "One-dimensional",
+          "satisfaction_impact": 0.8,
+          "dissatisfaction_impact": 0.8,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.2,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_security": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "integration": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 2,
+          "One-dimensional": 1,
+          "Attractive": 4,
+          "Indifferent": 3,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 20.0,
+          "One-dimensional": 10.0,
+          "Attractive": 40.0,
+          "Indifferent": 30.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.52,
+        "average_dissatisfaction_impact": 0.32999999999999996,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "privacy_security"
+          ],
+          "attractive_features": [
+            "natural_conversation",
+            "personalization",
+            "multi_modal"
+          ],
+          "one_dimensional_features": [
+            "response_speed"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "High",
+          "category": "Must-be Needs",
+          "feature": "Context Memory",
+          "description": "Users consider Context Memory as a basic requirement, must prioritize ensuring its stability and reliability.",
+          "action": "Immediate improvement and ensure 100% reliability"
+        },
+        {
+          "priority": "Medium",
+          "category": "One-dimensional Needs",
+          "feature": "Response Speed",
+          "description": "Improving Response Speed directly enhances user satisfaction.",
+          "action": "Continuously optimize performance and user experience"
+        },
+        {
+          "priority": "Low",
+          "category": "Attractive Needs",
+          "feature": "Natural Conversation",
+          "description": "Natural Conversation is a feature that can create user delight.",
+          "action": "Invest in development when resources allow"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 85.0,
+      "grade": "B",
+      "percentile": 91.3085038052915,
+      "adjective_rating": "Best Imaginable",
+      "acceptability": "Acceptable",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 85.0,
+          "grade": "B",
+          "percentile": 91.3085038052915,
+          "adjective_rating": "Best Imaginable",
+          "acceptability": "Acceptable"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "Excellent",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "Excellent",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "Excellent",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "Excellent",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 85.0,
+          "industry_average": 68.0,
+          "difference_from_average": 17.0,
+          "percentile": 91.3085038052915,
+          "better_than_percent": 91.3085038052915,
+          "benchmark_category": "Top Tier (Top 10%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 82.3,
+      "maturity_level": "Good - Competitive",
+      "key_strengths": [
+        "High user satisfaction",
+        "Features with attractive qualities",
+        "Stable basic functionality"
+      ],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "77921f35",
+    "created_at": "2025-08-27T14:50:07.517028",
+    "updated_at": "2025-08-27T14:50:07.517028"
   }
 }

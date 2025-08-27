@@ -79,61 +79,61 @@ class KanoModelEvaluator:
         return [
             {
                 "id": "response_accuracy",
-                "title": "回應準確性",
+                "title": "Response Accuracy",
                 "functional": "如果AI Agent總是能準確理解您的問題並給出正確答案，您的感受如何？",
                 "dysfunctional": "如果AI Agent經常誤解您的問題或給出錯誤答案，您的感受如何？"
             },
             {
                 "id": "response_speed",
-                "title": "回應速度",
+                "title": "Response Speed",
                 "functional": "如果AI Agent能在1秒內回應您的問題，您的感受如何？",
                 "dysfunctional": "如果AI Agent需要超過10秒才能回應您的問題，您的感受如何？"
             },
             {
                 "id": "natural_conversation",
-                "title": "自然對話",
+                "title": "Natural Conversation",
                 "functional": "如果AI Agent能像人類一樣進行自然流暢的對話，您的感受如何？",
                 "dysfunctional": "如果AI Agent的回應生硬且不自然，您的感受如何？"
             },
             {
                 "id": "context_memory",
-                "title": "上下文記憶",
+                "title": "Context Memory",
                 "functional": "如果AI Agent能記住整個對話歷史並保持上下文連貫，您的感受如何？",
                 "dysfunctional": "如果AI Agent無法記住之前的對話內容，每次都要重新解釋，您的感受如何？"
             },
             {
                 "id": "personalization",
-                "title": "個人化服務",
+                "title": "Personalization Service",
                 "functional": "如果AI Agent能根據您的偏好和歷史記錄提供個人化服務，您的感受如何？",
                 "dysfunctional": "如果AI Agent無法提供任何個人化服務，對所有人都是相同回應，您的感受如何？"
             },
             {
                 "id": "multi_modal",
-                "title": "多模態互動",
+                "title": "Multi-modal Interaction",
                 "functional": "如果AI Agent能處理文字、圖片、語音等多種輸入方式，您的感受如何？",
                 "dysfunctional": "如果AI Agent只能處理純文字輸入，您的感受如何？"
             },
             {
                 "id": "error_handling",
-                "title": "錯誤處理",
+                "title": "Error Handling",
                 "functional": "如果AI Agent在出錯時能主動道歉並提供解決方案，您的感受如何？",
                 "dysfunctional": "如果AI Agent出錯時不承認錯誤，繼續堅持錯誤回答，您的感受如何？"
             },
             {
                 "id": "learning_ability",
-                "title": "學習能力",
+                "title": "Learning Ability",
                 "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
                 "dysfunctional": "如果AI Agent完全無法學習改進，重複犯同樣的錯誤，您的感受如何？"
             },
             {
                 "id": "emotional_intelligence",
-                "title": "情感智慧",
+                "title": "Emotional Intelligence",
                 "functional": "如果AI Agent能理解您的情感並給予適當的情感回應，您的感受如何？",
                 "dysfunctional": "如果AI Agent完全無法理解情感，對情緒化的問題給出冷漠回應，您的感受如何？"
             },
             {
                 "id": "privacy_protection",
-                "title": "隱私保護",
+                "title": "Privacy Protection",
                 "functional": "如果AI Agent能嚴格保護您的隱私資訊並透明說明數據使用方式，您的感受如何？",
                 "dysfunctional": "如果AI Agent可能洩露您的隱私資訊且不說明數據如何使用，您的感受如何？"
             }

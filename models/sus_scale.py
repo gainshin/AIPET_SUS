@@ -11,8 +11,8 @@ from enum import Enum
 
 class SUSGrade(Enum):
     """SUS評級"""
-    A = "A"  # 90-100分：優秀
-    B = "B"  # 80-89分：良好
+    A = "A"  # 90-100 points: Excellent
+    B = "B"  # 80-89 points: Good
     C = "C"  # 70-79分：中等
     D = "D"  # 60-69分：較差
     F = "F"  # 0-59分：極差
@@ -107,15 +107,15 @@ class SUSEvaluator:
             }
         }
         
-        # 形容詞評級映射
+        # Adjective rating mapping
         self.adjective_ratings = [
-            (0, 25, "極差"),
-            (25, 39, "很差"),
-            (39, 52, "差"),
-            (52, 72, "尚可"),
-            (72, 85, "好"),
-            (85, 92, "優秀"),
-            (92, 100, "最佳")
+            (0, 25, "Awful"),
+            (25, 39, "Poor"),
+            (39, 52, "OK"),
+            (52, 72, "Good"),
+            (72, 85, "Excellent"),
+            (85, 92, "Best Imaginable"),
+            (92, 100, "Best Imaginable")
         ]
         
         # Acceptability levels
@@ -258,15 +258,15 @@ class SUSEvaluator:
                 else:
                     normalized_score = 5 - response
                 
-                # 表現評估
+                # Performance assessment
                 if normalized_score >= 3:
-                    performance = "優秀"
+                    performance = "Excellent"
                 elif normalized_score >= 2:
-                    performance = "良好"
+                    performance = "Good"
                 elif normalized_score >= 1:
-                    performance = "普通"
+                    performance = "Average"
                 else:
-                    performance = "需要改進"
+                    performance = "Needs Improvement"
                 
                 analysis[question_id] = {
                     "question": question["text"],
@@ -360,15 +360,15 @@ class SUSEvaluator:
         }
         
         if percentile >= 90:
-            comparison["benchmark_category"] = "頂尖 (前10%)"
+            comparison["benchmark_category"] = "Top Tier (Top 10%)"
         elif percentile >= 75:
-            comparison["benchmark_category"] = "優秀 (前25%)"
+            comparison["benchmark_category"] = "Excellent (Top 25%)"
         elif percentile >= 50:
-            comparison["benchmark_category"] = "中上 (前50%)"
+            comparison["benchmark_category"] = "Above Average (Top 50%)"
         elif percentile >= 25:
-            comparison["benchmark_category"] = "中等 (前75%)"
+            comparison["benchmark_category"] = "Average (Top 75%)"
         else:
-            comparison["benchmark_category"] = "需要改進 (後25%)"
+            comparison["benchmark_category"] = "Needs Improvement (Bottom 25%)"
         
         return comparison
     

@@ -187,35 +187,35 @@ def generate_overall_assessment(kano_summary, sus_result):
     else:
         assessment['maturity_level'] = 'Very Poor - Critical Issues'
     
-    # 識別關鍵優勢
+    # Identify key strengths
     if sus_result.score >= 80:
-        assessment['key_strengths'].append('用戶滿意度高')
+        assessment['key_strengths'].append('High user satisfaction')
     if kano_summary['category_percentages'].get('Attractive', 0) > 20:
-        assessment['key_strengths'].append('具備魅力型功能')
+        assessment['key_strengths'].append('Features with attractive qualities')
     if kano_summary['category_percentages'].get('Must-be', 0) < 30:
-        assessment['key_strengths'].append('基礎功能穩定')
+        assessment['key_strengths'].append('Stable basic functionality')
     
-    # 識別關鍵問題
+    # Identify critical issues
     if sus_result.score < 60:
-        assessment['critical_issues'].append('可用性嚴重不足')
+        assessment['critical_issues'].append('Severely insufficient usability')
     if kano_summary['category_percentages'].get('Must-be', 0) > 50:
-        assessment['critical_issues'].append('過多基礎型需求未滿足')
+        assessment['critical_issues'].append('Too many unmet basic requirements')
     if kano_summary['average_dissatisfaction_impact'] > 0.6:
-        assessment['critical_issues'].append('用戶不滿意度風險高')
+        assessment['critical_issues'].append('High risk of user dissatisfaction')
     
-    # 確定優先行動
+    # Determine priority actions
     if sus_result.score < 70:
-        assessment['priority_actions'].append('立即改善系統可用性')
+        assessment['priority_actions'].append('Immediately improve system usability')
     if kano_summary['category_percentages'].get('Must-be', 0) > 40:
-        assessment['priority_actions'].append('優先滿足基礎型需求')
+        assessment['priority_actions'].append('Prioritize meeting basic requirements')
     if kano_summary['category_percentages'].get('One-dimensional', 0) > 30:
-        assessment['priority_actions'].append('提升期望型功能性能')
+        assessment['priority_actions'].append('Enhance performance of expected features')
     
     return assessment
 
 @app.route('/api/evaluation/<evaluation_id>')
 def get_evaluation(evaluation_id):
-    """獲取評估結果"""
+    """Get evaluation results"""
     try:
         evaluation = data_manager.get_evaluation(evaluation_id)
         if not evaluation:

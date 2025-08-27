@@ -1067,17 +1067,44 @@ function getMaturityAlertColor(score) {
     return 'danger';
 }
 
-// 下載報告
-async function downloadReport() {
-    if (!evaluationResult || !evaluationResult.evaluation_id) {
-        showAlert('No report available for download', 'warning');
-        return;
+// Download report - supports both direct call and with evaluation ID
+async function downloadReport(evaluationId = null) {
+    let targetEvaluationId;
+    let evaluationData;
+    
+    if (evaluationId) {
+        // Called from project tables with specific evaluation ID
+        targetEvaluationId = evaluationId;
+        
+        // Fetch evaluation data to get project info for filename
+        try {
+            const evalResponse = await fetch(`${API_BASE}/evaluation/${evaluationId}`);
+            const evalResult = await evalResponse.json();
+            
+            if (evalResult.success) {
+                evaluationData = evalResult.data;
+            } else {
+                showAlert('Failed to load evaluation details', 'error');
+                return;
+            }
+        } catch (error) {
+            showAlert('Failed to load evaluation details: ' + error.message, 'error');
+            return;
+        }
+    } else {
+        // Called from results page using global evaluationResult
+        if (!evaluationResult || !evaluationResult.evaluation_id) {
+            showAlert('No report available for download', 'warning');
+            return;
+        }
+        targetEvaluationId = evaluationResult.evaluation_id;
+        evaluationData = evaluationResult;
     }
     
-    showLoading(true, '正在生成PDF報告...');
+    showLoading(true, 'Generating PDF report...');
     
     try {
-        const response = await fetch(`${API_BASE}/report/${evaluationResult.evaluation_id}`);
+        const response = await fetch(`${API_BASE}/report/${targetEvaluationId}`);
         
         if (response.ok) {
             const blob = await response.blob();
@@ -1085,7 +1112,33 @@ async function downloadReport() {
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = `AI_Agent_評估報告_${evaluationResult.evaluation_id}.pdf`;
+            
+            // Generate filename: ProjectName_version_ddmmyyyy.pdf  
+            const projectInfo = evaluationData.project_info || {};
+            const projectName = (projectInfo.name || 'UnknownProject').replace(/[^\w\-_]/g, '').substring(0, 30);
+            let version = (projectInfo.version || '').trim();
+            if (!version) {
+                version = '1.0';
+            }
+            version = version.replace(/[^\w\-_.]/g, '').substring(0, 10);
+            
+            // Generate date in ddmmyyyy format
+            let dateStr = '';
+            try {
+                const createdAt = evaluationData.created_at;
+                if (createdAt) {
+                    const date = new Date(createdAt);
+                    dateStr = date.toLocaleDateString('en-GB').replace(/\//g, '');
+                } else {
+                    const now = new Date();
+                    dateStr = now.toLocaleDateString('en-GB').replace(/\//g, '');
+                }
+            } catch {
+                const now = new Date();
+                dateStr = now.toLocaleDateString('en-GB').replace(/\//g, '');
+            }
+            
+            a.download = `${projectName}_${version}_${dateStr}.pdf`;
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);

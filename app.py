@@ -338,10 +338,36 @@ def generate_report(evaluation_id):
         report_generator = ReportGenerator()
         report_path = report_generator.generate_pdf_report(evaluation, evaluation_id)
         
+        # Generate filename: ProjectName_version_ddmmyyyy.pdf
+        project_info = evaluation.get('project_info', {})
+        project_name = project_info.get('name', 'UnknownProject').replace(' ', '_')
+        version = project_info.get('version', '').strip()
+        if not version:
+            version = '1.0'
+        version = version.replace(' ', '_')
+        
+        # Generate date in ddmmyyyy format
+        created_at = evaluation.get('created_at', '')
+        try:
+            if created_at:
+                date_obj = datetime.datetime.fromisoformat(created_at.replace('Z', '+00:00'))
+                date_str = date_obj.strftime('%d%m%Y')
+            else:
+                date_str = datetime.datetime.now().strftime('%d%m%Y')
+        except:
+            date_str = datetime.datetime.now().strftime('%d%m%Y')
+        
+        # Clean project name to remove special characters
+        import re
+        clean_project_name = re.sub(r'[^\w\-_]', '', project_name)[:30]  # Limit length
+        clean_version = re.sub(r'[^\w\-_\.]', '', version)[:10]  # Limit length
+        
+        filename = f'{clean_project_name}_{clean_version}_{date_str}.pdf'
+        
         return send_file(
             report_path,
             as_attachment=True,
-            download_name=f'AI_Agent_可用性評估報告_{evaluation_id}.pdf',
+            download_name=filename,
             mimetype='application/pdf'
         )
     except Exception as e:

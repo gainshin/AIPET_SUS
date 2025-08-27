@@ -1,6 +1,15 @@
 """
-SUS量表(System Usability Scale)評估模組
+SUS量表(System Usability Scale)評估模組 - 基於AIPET框架
 實現標準化的可用性評估問卷和分析功能
+
+改善建議基於AIPET代理式使用者體驗(Agentive UX)理論框架：
+- A (Agency): 代理能力 - 定義AI代理人的能力邊界與自主性  
+- I (Interaction): 互動模式 - 設計從手動到自動的光譜式控制體驗
+- P (Privacy): 隱私增強 - 將隱私控制權內建於互動中
+- E (Experience): 體驗連續性 - 確保跨設備、跨時間的無縫體驗  
+- T (Trust): 信任建立 - 透過可恢復性與透明度建立深度信任
+
+參考: improvement_recommendations_aipet_principles.py
 """
 
 import numpy as np
@@ -30,67 +39,67 @@ class SUSEvaluator:
     """SUS量表評估器"""
     
     def __init__(self):
-        # SUS標準問題（繁體中文版）
+        # SUS Standard Questions (English Version)
         self.questions = [
             {
                 "id": "q1",
-                "text": "我想要經常使用這個AI Agent系統",
+                "text": "I think that I would like to use this AI Agent system frequently",
                 "positive": True
             },
             {
                 "id": "q2", 
-                "text": "我覺得這個系統過於複雜",
+                "text": "I found the system unnecessarily complex",
                 "positive": False
             },
             {
                 "id": "q3",
-                "text": "我覺得這個系統很容易使用",
+                "text": "I thought the system was easy to use",
                 "positive": True
             },
             {
                 "id": "q4",
-                "text": "我需要技術人員的協助才能使用這個系統",
+                "text": "I think that I would need the support of a technical person to be able to use this system",
                 "positive": False
             },
             {
                 "id": "q5",
-                "text": "我覺得這個系統的各項功能整合得很好",
+                "text": "I found the various functions in this system were well integrated",
                 "positive": True
             },
             {
                 "id": "q6",
-                "text": "我覺得這個系統有太多不一致的地方",
+                "text": "I thought there was too much inconsistency in this system",
                 "positive": False
             },
             {
                 "id": "q7",
-                "text": "我想大部分的人能很快學會使用這個系統",
+                "text": "I would imagine that most people would learn to use this system very quickly",
                 "positive": True
             },
             {
                 "id": "q8",
-                "text": "我覺得這個系統很難使用",
+                "text": "I found the system very cumbersome to use",
                 "positive": False
             },
             {
                 "id": "q9",
-                "text": "我對使用這個系統感到很有信心",
+                "text": "I felt very confident using the system",
                 "positive": True
             },
             {
                 "id": "q10",
-                "text": "在使用這個系統之前，我需要先學習很多東西",
+                "text": "I needed to learn a lot of things before I could get going with this system",
                 "positive": False
             }
         ]
         
-        # Likert量表選項
+        # Likert scale options
         self.likert_options = {
-            1: "強烈不同意",
-            2: "不同意", 
-            3: "普通",
-            4: "同意",
-            5: "強烈同意"
+            1: "Strongly Disagree",
+            2: "Disagree", 
+            3: "Neutral",
+            4: "Agree",
+            5: "Strongly Agree"
         }
         
         # 行業基準數據 (基於大量SUS研究)
@@ -126,7 +135,7 @@ class SUSEvaluator:
         ]
     
     def get_questions(self) -> List[Dict]:
-        """獲取SUS問卷問題"""
+        """Get SUS questionnaire questions"""
         return self.questions
     
     def calculate_sus_score(self, responses: Dict[str, int]) -> float:
@@ -289,47 +298,58 @@ class SUSEvaluator:
             if data["normalized_score"] <= 1:
                 poor_performers.append((question_id, data))
         
-        # 根據問題類型生成建議
+        # 基於 AIPET 框架生成代理式使用者體驗改善建議
+        # AIPET: Agency (代理能力), Interaction (互動模式), Privacy (隱私增強), Experience (體驗連續性), Trust (信任建立)
         suggestion_mapping = {
             "q1": {
-                "area": "用戶參與度",
-                "suggestion": "提升AI Agent的實用性和價值，讓用戶更願意經常使用"
+                "area": "Agency - Agent Value Proposition",
+                "aipet_dimension": "A - Agency (代理能力)",
+                "suggestion": "Enhance AI Agent's autonomous capabilities and value delivery. Implement 'rules = behavior + triggers + exceptions' to define clear agent boundaries while enabling multi-modal interactions that provide genuine utility beyond traditional tools."
             },
             "q2": {
-                "area": "系統複雜性",
-                "suggestion": "簡化用戶界面和交互流程，降低系統複雜度"
+                "area": "Interaction - Complexity Reduction", 
+                "aipet_dimension": "I - Interaction (互動模式)",
+                "suggestion": "Implement spectrum control from 'fully manual' to 'fully automatic' like cruise control. Design guided intent declaration interfaces that replace open-ended prompts with structured components (buttons, forms, dropdowns) to reduce cognitive load."
             },
             "q3": {
-                "area": "易用性",
-                "suggestion": "改善用戶體驗設計，提供更直觀的操作方式"
+                "area": "Interaction - Intuitive Collaboration",
+                "aipet_dimension": "I - Interaction (互動模式)", 
+                "suggestion": "Transition from 'chat interface' to 'contextual collaboration'. Design multi-modal, contextual interactions where AI acts directly on your workspace rather than through separate conversation windows."
             },
             "q4": {
-                "area": "獨立使用性",
-                "suggestion": "完善幫助文檔和引導功能，降低技術門檻"
+                "area": "Trust - Transparent Autonomy",
+                "aipet_dimension": "T - Trust (信任建立)",
+                "suggestion": "Build trust through transparency and recoverability. Implement visible reasoning processes and one-click undo functionality. Ensure 'Human at the helm' principle with clear task logs and the ability to intervene at any step."
             },
             "q5": {
-                "area": "功能整合",
-                "suggestion": "優化功能間的連接和協調，提供更統一的體驗"
+                "area": "Experience - Seamless Integration",
+                "aipet_dimension": "E - Experience (體驗連續性)",
+                "suggestion": "Create cross-device, cross-time memory for AI agents. Enable tasks started on mobile to continue seamlessly on laptop. Implement historical data reflection and dynamic contextual prompting for adaptive evolution."
             },
             "q6": {
-                "area": "一致性",
-                "suggestion": "建立清晰的設計規範，確保界面和交互的一致性"
+                "area": "Experience - Consistency Across Modalities",
+                "aipet_dimension": "E - Experience (體驗連續性)",
+                "suggestion": "Ensure consistent experience across voice, visual, text, and touch interactions. Design for the continuous 'Sense-Think-Do' loop where AI maintains context and behavior consistency regardless of interaction mode."
             },
             "q7": {
-                "area": "學習曲線",
-                "suggestion": "優化新手引導流程，提供更好的學習體驗"
+                "area": "Interaction - Guided Learning",
+                "aipet_dimension": "I - Interaction (互動模式)",
+                "suggestion": "Replace static onboarding with dynamic learning mechanisms. Design hybrid UI that guides users to clearly 'declare' high-level goals through structured components rather than overwhelming them with open-ended possibilities."
             },
             "q8": {
-                "area": "使用難度",
-                "suggestion": "重新設計複雜的功能，提供更簡單的替代方案"
+                "area": "Agency - Capability Boundaries",
+                "aipet_dimension": "A - Agency (代理能力)",
+                "suggestion": "Clearly define agent capability boundaries using 'behavior + triggers + exceptions' patterns. Provide batch processing interfaces for repetitive tasks, allowing users to manage hundreds of AI-executed micro-tasks efficiently."
             },
             "q9": {
-                "area": "用戶信心",
-                "suggestion": "增加反饋機制和錯誤預防，提升用戶使用信心"
+                "area": "Trust - Observability & Control",
+                "aipet_dimension": "T - Trust (信任建立)", 
+                "suggestion": "Implement observability and live feedback mechanisms. Visualize AI's action plans before execution, allowing users to review, modify, or reject plans. Build confidence through transparent decision-making processes and error recovery options."
             },
             "q10": {
-                "area": "學習成本",
-                "suggestion": "減少預備知識要求，提供更好的上手體驗"
+                "area": "Privacy - Contextual Authorization",
+                "aipet_dimension": "P - Privacy (隱私增強)",
+                "suggestion": "Embed privacy controls within interactions. When AI needs permissions (calendar access, contacts), request authorization in context rather than in buried settings pages. Design 'just enough friction' for trust building."
             }
         }
         

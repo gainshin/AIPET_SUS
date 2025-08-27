@@ -1,0 +1,113 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://169.254.0.21:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138

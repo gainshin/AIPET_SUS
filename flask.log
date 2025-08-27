@@ -1,0 +1,336 @@
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:56:09] "GET /api/kano/questions HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:56:15] "GET /api/sus/questions HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/test_questionnaires_english.py', reloading
+ * Detected change in '/home/user/webapp/test_questionnaires_english.py', reloading
+ * Detected change in '/home/user/webapp/test_questionnaires_english.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:57:11] "GET /api/kano/questions HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:57:11] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:57:57] "GET /api/evaluation/77921f35 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:59:10] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:47] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:48] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:48] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:00:49] "GET /api/evaluation/82eeb6eb HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:03:56] "HEAD /?eval=77921f35 HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/improvement_recommendations_aipet_principles.py', reloading
+ * Detected change in '/home/user/webapp/models/improvement_recommendations_aipet_principles.py', reloading
+ * Detected change in '/home/user/webapp/models/improvement_recommendations_aipet_principles.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 15:05:45] "[33mPOST /api/submit-sus HTTP/1.1[0m" 404 -
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 15:06:02] "[31m[1mPOST /api/evaluate HTTP/1.1[0m" 400 -
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[2025-08-27 15:06:12,657] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:06:12] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[2025-08-27 15:07:00,879] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:07:00] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_types.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[2025-08-27 15:07:59,102] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:07:59] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+10.12.253.40 - - [27/Aug/2025 15:07:59] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:07:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:07:59] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:07:59] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:00] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:00] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:00] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:00] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:02] "GET /api/evaluation/82eeb6eb HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:20] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:20] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:08:22] "GET /api/evaluation/77921f35 HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_suggestions.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:12:54] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:13:34] "GET /api/evaluation/82eeb6eb HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:14:23] "POST /api/evaluate HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+ * Detected change in '/home/user/webapp/models/aipet_questions.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+10.12.253.40 - - [27/Aug/2025 15:21:09] "HEAD /?eval=77921f35 HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+10.12.253.40 - - [27/Aug/2025 15:21:38] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:22:08] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:22:09] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 15:22:20] "GET /api/evaluation/173a7aa5 HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+127.0.0.1 - - [27/Aug/2025 15:25:36] "GET /api/aipet/questions HTTP/1.1" 200 -
+[2025-08-27 15:25:36,568] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:25:36] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+127.0.0.1 - - [27/Aug/2025 15:25:47] "GET /api/aipet/questions HTTP/1.1" 200 -
+[2025-08-27 15:25:47,356] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:25:47] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+ * Detected change in '/home/user/webapp/debug_sus_detailed.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+ * Detected change in '/home/user/webapp/debug_flask_conversion.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+127.0.0.1 - - [27/Aug/2025 15:27:26] "GET /api/aipet/questions HTTP/1.1" 200 -
+[2025-08-27 15:27:26,567] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:27:26] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+ * Detected change in '/home/user/webapp/test_aipet_api.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+127.0.0.1 - - [27/Aug/2025 15:27:54] "GET /api/aipet/questions HTTP/1.1" 200 -
+[2025-08-27 15:27:54,665] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:27:54] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+ * Detected change in '/home/user/webapp/test_basic_evaluation.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+[2025-08-27 15:28:15,867] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:28:15] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+Starting AI Agent Usability Evaluation Tool...
+Visit http://localhost:5000 to begin
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 141-989-138
+[2025-08-27 15:29:01,214] INFO in app: DEBUG: sus_responses_raw type and content: <class 'dict'> - {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'q5': 3, 'q6': 3, 'q7': 3, 'q8': 3, 'q9': 3, 'q10': 3}
+[2025-08-27 15:29:01,215] INFO in app: DEBUG: Converting q1: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converted q1 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converting q2: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converted q2 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converting q3: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converted q3 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,216] INFO in app: DEBUG: Converting q4: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converted q4 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converting q5: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converted q5 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converting q6: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converted q6 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converting q7: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,217] INFO in app: DEBUG: Converted q7 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converting q8: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converted q8 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converting q9: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converted q9 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converting q10: 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,218] INFO in app: DEBUG: Converted q10 to 3 (type: <class 'int'>)
+[2025-08-27 15:29:01,219] ERROR in app: 評估過程中發生錯誤: '<=' not supported between instances of 'str' and 'int'
+127.0.0.1 - - [27/Aug/2025 15:29:01] "[35m[1mPOST /api/evaluate HTTP/1.1[0m" 500 -
+127.0.0.1 - - [27/Aug/2025 15:29:17] "GET /api/health HTTP/1.1" 200 -

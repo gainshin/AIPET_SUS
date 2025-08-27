@@ -144,11 +144,11 @@ class AIPETQuestionnaire:
     def _get_dimension_name(self, dimension: AIPETDimension) -> str:
         """獲取維度名稱"""
         dimension_names = {
-            AIPETDimension.AGENCY: "Agency (代理能力)",
-            AIPETDimension.INTERACTION: "Interaction (互動模式)",
-            AIPETDimension.PRIVACY: "Privacy (隱私增強)",
-            AIPETDimension.EXPERIENCE: "Experience (體驗連續性)",
-            AIPETDimension.TRUST: "Trust (信任建立)"
+            AIPETDimension.AGENCY: "Agency",
+            AIPETDimension.INTERACTION: "Interaction",
+            AIPETDimension.PRIVACY: "Privacy",
+            AIPETDimension.EXPERIENCE: "Experience",
+            AIPETDimension.TRUST: "Trust"
         }
         return dimension_names.get(dimension, "Unknown")
     

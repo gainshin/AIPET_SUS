@@ -296,11 +296,11 @@ function renderAIPETQuestions() {
     
     // Group questions by dimension for better organization
     const dimensionGroups = {
-        'A': { name: 'Agency (代理能力)', questions: [] },
-        'I': { name: 'Interaction (互動模式)', questions: [] },
-        'P': { name: 'Privacy (隱私增強)', questions: [] },
-        'E': { name: 'Experience (體驗連續性)', questions: [] },
-        'T': { name: 'Trust (信任建立)', questions: [] }
+        'A': { name: 'Agency', questions: [] },
+        'I': { name: 'Interaction', questions: [] },
+        'P': { name: 'Privacy', questions: [] },
+        'E': { name: 'Experience', questions: [] },
+        'T': { name: 'Trust', questions: [] }
     };
     
     conditionalQuestions.forEach(question => {
@@ -620,16 +620,7 @@ function renderSUSResults(sus) {
                              style="width: ${sus.score}%"></div>
                     </div>
                 </div>
-                <div class="progress-item">
-                    <div class="progress-label">
-                        <span>Industry Ranking</span>
-                        <span>Top ${(100 - sus.percentile).toFixed(1)}%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" 
-                             style="width: ${sus.percentile}%"></div>
-                    </div>
-                </div>
+
             </div>
             <div class="mt-3">
                 <p><strong>Grade:</strong> <span class="badge bg-${getGradeBadgeColor(sus.grade)}">${sus.grade}</span></p>

@@ -1,5 +1,5 @@
 /**
- * AI Agent 可用性評估工具 - 前端應用程式
+ * AI Agent Usability Evaluation Tool - Frontend Application
  */
 
 // 全局變量
@@ -11,10 +11,10 @@ let kanoResponses = {};
 let susResponses = {};
 let evaluationResult = null;
 
-// API基礎URL
+// API Base URL
 const API_BASE = '/api';
 
-// 頁面初始化
+// Page initialization
 document.addEventListener('DOMContentLoaded', function() {
     showDashboard();
     loadKanoQuestions();
@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', handleProjectInfoSubmit);
     }
     
-    // 更新導航狀態
+    // Update navigation state
     updateNavigation('dashboard');
 });
 
-// 顯示Dashboard
+// Show Dashboard
 function showDashboard() {
     hideAllSections();
     const dashboardSection = document.getElementById('dashboardSection');
@@ -44,7 +44,7 @@ function showDashboard() {
     loadDashboardStats();
 }
 
-// 顯示新項目表單
+// Show new project form
 function showNewProject() {
     hideAllSections();
     const newProjectSection = document.getElementById('newProjectSection');
@@ -55,7 +55,7 @@ function showNewProject() {
     updateNavigation('new-project');
 }
 
-// 更新導航狀態
+// Update navigation state
 function updateNavigation(activeItem) {
     document.querySelectorAll('.nav-item').forEach(item => {
         item.classList.remove('active');
@@ -73,13 +73,13 @@ function updateNavigation(activeItem) {
     }
 }
 
-// 處理項目信息提交
+// Handle project info submission
 function handleProjectInfoSubmit(e) {
     e.preventDefault();
     
     const name = document.getElementById('projectName').value.trim();
     if (!name) {
-        showAlert('請輸入項目名稱', 'warning');
+        showAlert('Please enter project name', 'warning');
         return;
     }
     
@@ -93,7 +93,7 @@ function handleProjectInfoSubmit(e) {
     showKanoEvaluation();
 }
 
-// 顯示Kano評估
+// Show Kano evaluation
 function showKanoEvaluation() {
     hideAllSections();
     document.getElementById('kanoEvaluationSection').style.display = 'block';
@@ -101,7 +101,7 @@ function showKanoEvaluation() {
     renderKanoQuestions();
 }
 
-// 加載Kano問題
+// Load Kano questions
 async function loadKanoQuestions() {
     try {
         const response = await fetch(`${API_BASE}/kano/questions`);
@@ -110,14 +110,14 @@ async function loadKanoQuestions() {
         if (data.success) {
             kanoQuestions = data.questions;
         } else {
-            showAlert('加載Kano問題失敗: ' + data.error, 'error');
+            showAlert('Failed to load Kano questions: ' + data.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     }
 }
 
-// 渲染Kano問題
+// Render Kano questions
 function renderKanoQuestions() {
     const container = document.getElementById('kanoQuestions');
     container.innerHTML = '';
@@ -132,7 +132,7 @@ function renderKanoQuestions() {
             </div>
             
             <div class="question-section">
-                <h6><i class="bi bi-plus-circle text-success"></i> 功能性問題</h6>
+                <h6><i class="bi bi-plus-circle text-success"></i> Functional Question</h6>
                 <p class="question-text">${question.functional}</p>
                 <div class="option-group" id="functional-${question.id}">
                     ${renderKanoOptions(question.id, 'functional')}
@@ -140,7 +140,7 @@ function renderKanoQuestions() {
             </div>
             
             <div class="question-section">
-                <h6><i class="bi bi-dash-circle text-danger"></i> 失功能性問題</h6>
+                <h6><i class="bi bi-dash-circle text-danger"></i> Dysfunctional Question</h6>
                 <p class="question-text">${question.dysfunctional}</p>
                 <div class="option-group" id="dysfunctional-${question.id}">
                     ${renderKanoOptions(question.id, 'dysfunctional')}
@@ -151,14 +151,14 @@ function renderKanoQuestions() {
     });
 }
 
-// 渲染Kano選項
+// Render Kano options
 function renderKanoOptions(questionId, type) {
     const options = [
-        { value: 1, text: '我喜歡這樣' },
-        { value: 2, text: '理所當然應該這樣' },
-        { value: 3, text: '我無所謂' },
-        { value: 4, text: '我勉強可以接受' },
-        { value: 5, text: '我不喜歡這樣' }
+        { value: 1, text: 'I like it that way' },
+        { value: 2, text: 'It must be that way' },
+        { value: 3, text: 'I am neutral' },
+        { value: 4, text: 'I can live with it that way' },
+        { value: 5, text: 'I dislike it that way' }
     ];
     
     return options.map(option => `
@@ -169,7 +169,7 @@ function renderKanoOptions(questionId, type) {
     `).join('');
 }
 
-// 選擇Kano選項
+// Select Kano option
 function selectKanoOption(questionId, type, value, element) {
     // 移除同組其他選項的選中狀態
     const group = element.parentNode;
@@ -188,7 +188,7 @@ function selectKanoOption(questionId, type, value, element) {
     updateKanoProgress();
 }
 
-// 更新Kano進度
+// Update Kano progress
 function updateKanoProgress() {
     const totalQuestions = kanoQuestions.length * 2; // 每個問題有兩個子問題
     let answeredCount = 0;
@@ -199,10 +199,10 @@ function updateKanoProgress() {
     });
     
     const progress = (answeredCount / totalQuestions) * 100;
-    console.log(`Kano進度: ${answeredCount}/${totalQuestions} (${progress.toFixed(1)}%)`);
+    console.log(`Kano progress: ${answeredCount}/${totalQuestions} (${progress.toFixed(1)}%)`);
 }
 
-// 提交Kano評估
+// Submit Kano evaluation
 function submitKanoEvaluation() {
     // 檢查是否所有問題都已回答
     const incompleteQuestions = kanoQuestions.filter(q => 
@@ -212,14 +212,14 @@ function submitKanoEvaluation() {
     );
     
     if (incompleteQuestions.length > 0) {
-        showAlert(`還有 ${incompleteQuestions.length} 個問題未完成回答`, 'warning');
+        showAlert(`${incompleteQuestions.length} questions are still incomplete`, 'warning');
         return;
     }
     
     showSUSEvaluation();
 }
 
-// 顯示SUS評估
+// Show SUS evaluation
 function showSUSEvaluation() {
     hideAllSections();
     const susSection = document.getElementById('susEvaluationSection');
@@ -230,7 +230,7 @@ function showSUSEvaluation() {
     renderSUSQuestions();
 }
 
-// 加載SUS問題
+// Load SUS questions
 async function loadSUSQuestions() {
     try {
         const response = await fetch(`${API_BASE}/sus/questions`);
@@ -239,14 +239,14 @@ async function loadSUSQuestions() {
         if (data.success) {
             susQuestions = data.questions;
         } else {
-            showAlert('加載SUS問題失敗: ' + data.error, 'error');
+            showAlert('Failed to load SUS questions: ' + data.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     }
 }
 
-// 渲染SUS問題
+// Render SUS questions
 function renderSUSQuestions() {
     const container = document.getElementById('susQuestions');
     if (!container) return;
@@ -262,11 +262,11 @@ function renderSUSQuestions() {
                 ${index + 1}. ${question.text}
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 12px; color: #6c757d;">
-                <span>強烈不同意</span>
-                <span>不同意</span>
-                <span>普通</span>
-                <span>同意</span>
-                <span>強烈同意</span>
+                <span>Strongly Disagree</span>
+                <span>Disagree</span>
+                <span>Neutral</span>
+                <span>Agree</span>
+                <span>Strongly Agree</span>
             </div>
             <div class="option-group" id="sus-${question.id}">
                 ${renderSUSOptions(question.id)}
@@ -276,7 +276,7 @@ function renderSUSQuestions() {
     });
 }
 
-// 渲染SUS選項
+// Render SUS options
 function renderSUSOptions(questionId) {
     return [1, 2, 3, 4, 5].map(value => `
         <button type="button" class="option-btn" 
@@ -286,7 +286,7 @@ function renderSUSOptions(questionId) {
     `).join('');
 }
 
-// 選擇SUS選項
+// Select SUS option
 function selectSUSOption(questionId, value, element) {
     // 移除同組其他選項的選中狀態
     const group = element.parentNode;
@@ -302,20 +302,20 @@ function selectSUSOption(questionId, value, element) {
     updateSUSProgress();
 }
 
-// 更新SUS進度
+// Update SUS progress
 function updateSUSProgress() {
     const totalQuestions = susQuestions.length;
     const answeredCount = Object.keys(susResponses).length;
     const progress = (answeredCount / totalQuestions) * 100;
-    console.log(`SUS進度: ${answeredCount}/${totalQuestions} (${progress.toFixed(1)}%)`);
+    console.log(`SUS progress: ${answeredCount}/${totalQuestions} (${progress.toFixed(1)}%)`);
 }
 
-// 提交SUS評估
+// Submit SUS evaluation
 async function submitSUSEvaluation() {
     // 檢查是否所有問題都已回答
     if (Object.keys(susResponses).length < susQuestions.length) {
         const unanswered = susQuestions.length - Object.keys(susResponses).length;
-        showAlert(`還有 ${unanswered} 個問題未回答`, 'warning');
+        showAlert(`${unanswered} questions remain unanswered`, 'warning');
         return;
     }
     
@@ -345,16 +345,16 @@ async function submitSUSEvaluation() {
             evaluationResult = result.data;
             showResults();
         } else {
-            showAlert('評估失敗: ' + result.error, 'error');
+            showAlert('Evaluation failed: ' + result.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     } finally {
         showLoading(false);
     }
 }
 
-// 顯示結果
+// Show results
 function showResults() {
     hideAllSections();
     document.getElementById('resultsSection').style.display = 'block';
@@ -362,33 +362,33 @@ function showResults() {
     renderResults();
 }
 
-// 渲染結果
+// Render results
 function renderResults() {
     const container = document.getElementById('evaluationResults');
     const sus = evaluationResult.sus_evaluation;
     const overall = evaluationResult.overall_assessment;
     
     container.innerHTML = `
-        <!-- 結果摘要 -->
+        <!-- Results Summary -->
         <div class="result-summary">
-            <h2><i class="bi bi-trophy"></i> ${projectInfo.name} 評估結果</h2>
+            <h2><i class="bi bi-trophy"></i> ${projectInfo.name} Assessment Results</h2>
             <div class="row mt-4">
                 <div class="col-md-6">
                     <div class="score-display">${sus.score.toFixed(1)}</div>
-                    <div class="score-subtitle">SUS可用性分數</div>
+                    <div class="score-subtitle">SUS Usability Score</div>
                 </div>
                 <div class="col-md-6">
                     <div class="score-display">${overall.overall_score.toFixed(1)}</div>
-                    <div class="score-subtitle">綜合評估分數</div>
+                    <div class="score-subtitle">Overall Assessment Score</div>
                 </div>
             </div>
             <div class="mt-3">
-                <h4>成熟度等級: ${overall.maturity_level}</h4>
-                <p>系統可接受性: ${sus.acceptability} | 用戶滿意度: ${sus.adjective_rating}</p>
+                <h4>Maturity Level: ${overall.maturity_level}</h4>
+                <p>System Acceptability: ${sus.acceptability} | User Satisfaction: ${sus.adjective_rating}</p>
             </div>
         </div>
 
-        <!-- 詳細結果網格 -->
+        <!-- Detailed Results Grid -->
         <div class="result-grid">
             ${renderSUSResults(sus)}
             ${renderKanoResults(evaluationResult.kano_evaluation)}
@@ -403,15 +403,15 @@ function renderResults() {
     }, 100);
 }
 
-// 渲染SUS結果
+// Render SUS results
 function renderSUSResults(sus) {
     return `
         <div class="result-card">
-            <h4><i class="bi bi-speedometer2 text-warning"></i> SUS量表分析</h4>
+            <h4><i class="bi bi-speedometer2 text-warning"></i> SUS Scale Analysis</h4>
             <div class="mb-3">
                 <div class="progress-item">
                     <div class="progress-label">
-                        <span>SUS分數</span>
+                        <span>SUS Score</span>
                         <span>${sus.score.toFixed(1)}/100</span>
                     </div>
                     <div class="progress">
@@ -421,8 +421,8 @@ function renderSUSResults(sus) {
                 </div>
                 <div class="progress-item">
                     <div class="progress-label">
-                        <span>行業排名</span>
-                        <span>前${(100 - sus.percentile).toFixed(1)}%</span>
+                        <span>Industry Ranking</span>
+                        <span>Top ${(100 - sus.percentile).toFixed(1)}%</span>
                     </div>
                     <div class="progress">
                         <div class="progress-bar bg-info" 
@@ -431,9 +431,9 @@ function renderSUSResults(sus) {
                 </div>
             </div>
             <div class="mt-3">
-                <p><strong>等級:</strong> <span class="badge bg-${getGradeBadgeColor(sus.grade)}">${sus.grade}</span></p>
-                <p><strong>可接受性:</strong> ${sus.acceptability}</p>
-                <p><strong>用戶感受:</strong> ${sus.adjective_rating}</p>
+                <p><strong>Grade:</strong> <span class="badge bg-${getGradeBadgeColor(sus.grade)}">${sus.grade}</span></p>
+                <p><strong>Acceptability:</strong> ${sus.acceptability}</p>
+                <p><strong>User Rating:</strong> ${sus.adjective_rating}</p>
             </div>
         </div>
     `;
@@ -797,7 +797,7 @@ function getMaturityAlertColor(score) {
 // 下載報告
 async function downloadReport() {
     if (!evaluationResult || !evaluationResult.evaluation_id) {
-        showAlert('沒有可下載的報告', 'warning');
+        showAlert('No report available for download', 'warning');
         return;
     }
     
@@ -818,13 +818,13 @@ async function downloadReport() {
             window.URL.revokeObjectURL(url);
             document.body.removeChild(a);
             
-            showAlert('報告下載成功', 'success');
+            showAlert('Report downloaded successfully', 'success');
         } else {
             const error = await response.json();
-            showAlert('報告生成失敗: ' + error.error, 'error');
+            showAlert('Report generation failed: ' + error.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     } finally {
         showLoading(false);
     }
@@ -865,16 +865,16 @@ async function showHistory() {
         if (result.success) {
             renderHistory(result.data);
         } else {
-            showAlert('加載歷史記錄失敗: ' + result.error, 'error');
+            showAlert('Failed to load history: ' + result.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     } finally {
         showLoading(false);
     }
 }
 
-// 這個函數已經被 renderHistoryTable 替代，保留以防向後兼容
+// This function has been replaced by renderHistoryTable, kept for backwards compatibility
 function renderHistory(evaluations) {
     renderHistoryTable(evaluations);
 }
@@ -892,10 +892,10 @@ async function viewEvaluation(evaluationId) {
             projectInfo = result.data.project_info || {};
             showResults();
         } else {
-            showAlert('加載評估詳情失敗: ' + result.error, 'error');
+            showAlert('Failed to load evaluation details: ' + result.error, 'error');
         }
     } catch (error) {
-        showAlert('網絡錯誤: ' + error.message, 'error');
+        showAlert('Network error: ' + error.message, 'error');
     } finally {
         showLoading(false);
     }
@@ -1045,7 +1045,7 @@ function shareProject(evaluationId) {
         });
     } else {
         navigator.clipboard.writeText(url).then(() => {
-            showAlert('鏈接已複製到剪貼板', 'success');
+            showAlert('Link copied to clipboard', 'success');
         });
     }
 }
@@ -1124,7 +1124,7 @@ document.addEventListener('keydown', function(e) {
 
 // 顯示設置頁面 (placeholder)
 function showSettings() {
-    showAlert('設置功能開發中...', 'info');
+    showAlert('Settings feature under development...', 'info');
 }
 
 // 渲染歷史記錄表格

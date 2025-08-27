@@ -1,6 +1,6 @@
 """
-AI Agent可用性評估工具 - Flask應用程式
-結合Kano模型和SUS量表的綜合評估系統
+AI Agent Usability Evaluation Tool - Flask Application
+Integrated evaluation system combining Kano Model and SUS Scale
 """
 
 import json
@@ -302,13 +302,13 @@ def internal_error(error):
     }), 500
 
 if __name__ == '__main__':
-    # 創建必要的目錄
+    # Create necessary directories
     os.makedirs('data', exist_ok=True)
     os.makedirs('reports', exist_ok=True)
     
-    # 啟動開發服務器
-    print("正在啟動AI Agent可用性評估工具...")
-    print("訪問 http://localhost:5000 開始使用")
+    # Start development server
+    print("Starting AI Agent Usability Evaluation Tool...")
+    print("Visit http://localhost:5000 to begin")
     
     app.run(
         host='0.0.0.0',

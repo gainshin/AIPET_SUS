@@ -350,6 +350,38 @@ def generate_report(evaluation_id):
             'error': str(e)
         }), 500
 
+@app.route('/api/evaluation/<evaluation_id>', methods=['DELETE'])
+def delete_evaluation(evaluation_id):
+    """Delete evaluation"""
+    try:
+        # Check if evaluation exists
+        evaluation = data_manager.get_evaluation(evaluation_id)
+        if not evaluation:
+            return jsonify({
+                'success': False,
+                'error': 'Evaluation not found'
+            }), 404
+        
+        # Delete the evaluation
+        success = data_manager.delete_evaluation(evaluation_id)
+        
+        if success:
+            return jsonify({
+                'success': True,
+                'message': 'Evaluation deleted successfully'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': 'Failed to delete evaluation'
+            }), 500
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
 @app.route('/api/health')
 def health_check():
     """健康檢查"""

@@ -288,6 +288,18 @@ body {
     transform: translateY(-1px);
 }
 
+/* Delete button specific styling */
+.action-btn.delete-btn {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.action-btn.delete-btn:hover {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
 /* Form Styles */
 .form-container {
     background: white;

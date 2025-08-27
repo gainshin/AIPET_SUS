@@ -1296,6 +1296,9 @@ function renderProjectsTable(evaluations) {
                         <button class="action-btn" onclick="downloadReport('${latestEval.id}')" title="Download Report">
                             <i class="bi bi-download"></i>
                         </button>
+                        <button class="action-btn delete-btn" onclick="confirmDeleteProject('${latestEval.id}', '${projectName.replace(/'/g, '\\\'')}')" title="Delete Project">
+                            <i class="bi bi-trash"></i>
+                        </button>
                     </div>
                 </td>
             </tr>
@@ -1439,9 +1442,103 @@ function renderHistoryTable(evaluations) {
                         <button class="action-btn" onclick="downloadReport('${evaluation.id}')" title="Download Report">
                             <i class="bi bi-download"></i>
                         </button>
+                        <button class="action-btn delete-btn" onclick="confirmDeleteProject('${evaluation.id}', '${(evaluation.project_info?.name || 'Unnamed Project').replace(/'/g, '\\\'')}')" title="Delete Project">
+                            <i class="bi bi-trash"></i>
+                        </button>
                     </div>
                 </td>
             </tr>
         `;
     }).join('');
+}
+// Confirm project deletion with modal dialog
+function confirmDeleteProject(evaluationId, projectName) {
+    // Create and show confirmation modal
+    const modalHtml = `
+        <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteConfirmModalLabel">
+                            <i class="bi bi-exclamation-triangle text-warning"></i>
+                            Confirm Project Deletion
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete the project "<strong>${projectName}</strong>"?</p>
+                        <div class="alert alert-warning mt-3">
+                            <i class="bi bi-info-circle"></i>
+                            <strong>Warning:</strong> This action cannot be undone. All evaluation data, results, and reports for this project will be permanently deleted.
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteProject('${evaluationId}')">
+                            <i class="bi bi-trash"></i> Delete Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remove existing modal if any
+    const existingModal = document.getElementById('deleteConfirmModal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Add modal to body
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Show modal
+    const modal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
+    modal.show();
+    
+    // Clean up modal when hidden
+    document.getElementById('deleteConfirmModal').addEventListener('hidden.bs.modal', function () {
+        this.remove();
+    });
+}
+
+// Delete project function
+async function deleteProject(evaluationId) {
+    showLoading(true, 'Deleting project...');
+    
+    try {
+        const response = await fetch(`${API_BASE}/evaluation/${evaluationId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // Hide modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('deleteConfirmModal'));
+            if (modal) {
+                modal.hide();
+            }
+            
+            // Show success message
+            showAlert('Project deleted successfully', 'success');
+            
+            // Refresh the projects list
+            if (currentStep === 'dashboard') {
+                loadProjects();
+                loadDashboardStats();
+            } else if (currentStep === 'history') {
+                showHistory();
+            }
+        } else {
+            showAlert('Failed to delete project: ' + result.error, 'error');
+        }
+    } catch (error) {
+        showAlert('Network error: ' + error.message, 'error');
+    } finally {
+        showLoading(false);
+    }
 }

@@ -3,7 +3,7 @@
  */
 
 // 全局變量
-let currentStep = 'welcome';
+let currentStep = 'dashboard';
 let projectInfo = {};
 let kanoQuestions = [];
 let susQuestions = [];
@@ -16,31 +16,61 @@ const API_BASE = '/api';
 
 // 頁面初始化
 document.addEventListener('DOMContentLoaded', function() {
-    showWelcome();
+    showDashboard();
     loadKanoQuestions();
     loadSUSQuestions();
+    loadDashboardStats();
     
     // 綁定表單事件
-    document.getElementById('projectInfoForm').addEventListener('submit', handleProjectInfoSubmit);
+    const form = document.getElementById('projectInfoForm');
+    if (form) {
+        form.addEventListener('submit', handleProjectInfoSubmit);
+    }
+    
+    // 更新導航狀態
+    updateNavigation('dashboard');
 });
 
-// 顯示歡迎頁面
-function showWelcome() {
+// 顯示Dashboard
+function showDashboard() {
     hideAllSections();
-    document.getElementById('welcomeSection').style.display = 'block';
-    currentStep = 'welcome';
+    const dashboardSection = document.getElementById('dashboardSection');
+    if (dashboardSection) {
+        dashboardSection.style.display = 'block';
+    }
+    currentStep = 'dashboard';
+    updateNavigation('dashboard');
+    loadProjects();
+    loadDashboardStats();
 }
 
-// 開始評估
-function startEvaluation() {
-    showProjectInfo();
+// 顯示新項目表單
+function showNewProject() {
+    hideAllSections();
+    const newProjectSection = document.getElementById('newProjectSection');
+    if (newProjectSection) {
+        newProjectSection.style.display = 'block';
+    }
+    currentStep = 'new-project';
+    updateNavigation('new-project');
 }
 
-// 顯示項目信息表單
-function showProjectInfo() {
-    hideAllSections();
-    document.getElementById('projectInfoSection').style.display = 'block';
-    currentStep = 'project-info';
+// 更新導航狀態
+function updateNavigation(activeItem) {
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    const navItems = document.querySelectorAll('.nav-item');
+    const navMapping = {
+        'dashboard': 0,
+        'new-project': 1,
+        'history': 2
+    };
+    
+    if (navMapping[activeItem] !== undefined && navItems[navMapping[activeItem]]) {
+        navItems[navMapping[activeItem]].classList.add('active');
+    }
 }
 
 // 處理項目信息提交
@@ -192,7 +222,10 @@ function submitKanoEvaluation() {
 // 顯示SUS評估
 function showSUSEvaluation() {
     hideAllSections();
-    document.getElementById('susEvaluationSection').style.display = 'block';
+    const susSection = document.getElementById('susEvaluationSection');
+    if (susSection) {
+        susSection.style.display = 'block';
+    }
     currentStep = 'sus-evaluation';
     renderSUSQuestions();
 }
@@ -216,6 +249,8 @@ async function loadSUSQuestions() {
 // 渲染SUS問題
 function renderSUSQuestions() {
     const container = document.getElementById('susQuestions');
+    if (!container) return;
+    
     container.innerHTML = '';
     
     susQuestions.forEach((question, index) => {
@@ -226,14 +261,14 @@ function renderSUSQuestions() {
                 <i class="bi bi-speedometer2"></i>
                 ${index + 1}. ${question.text}
             </div>
-            <div class="sus-scale-labels">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 12px; color: #6c757d;">
                 <span>強烈不同意</span>
                 <span>不同意</span>
                 <span>普通</span>
                 <span>同意</span>
                 <span>強烈同意</span>
             </div>
-            <div class="sus-option-group" id="sus-${question.id}">
+            <div class="option-group" id="sus-${question.id}">
                 ${renderSUSOptions(question.id)}
             </div>
         `;
@@ -244,7 +279,7 @@ function renderSUSQuestions() {
 // 渲染SUS選項
 function renderSUSOptions(questionId) {
     return [1, 2, 3, 4, 5].map(value => `
-        <button type="button" class="sus-option" 
+        <button type="button" class="option-btn" 
                 onclick="selectSUSOption('${questionId}', ${value}, this)">
             ${value}
         </button>
@@ -255,7 +290,7 @@ function renderSUSOptions(questionId) {
 function selectSUSOption(questionId, value, element) {
     // 移除同組其他選項的選中狀態
     const group = element.parentNode;
-    group.querySelectorAll('.sus-option').forEach(btn => btn.classList.remove('selected'));
+    group.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
     
     // 設置當前選項為選中
     element.classList.add('selected');
@@ -663,8 +698,12 @@ function startNewEvaluation() {
 // 顯示歷史記錄
 async function showHistory() {
     hideAllSections();
-    document.getElementById('historySection').style.display = 'block';
+    const historySection = document.getElementById('historySection');
+    if (historySection) {
+        historySection.style.display = 'block';
+    }
     currentStep = 'history';
+    updateNavigation('history');
     
     showLoading(true, '正在加載評估記錄...');
     
@@ -723,9 +762,141 @@ function getScoreBadgeClass(score) {
 
 // 隱藏所有區域
 function hideAllSections() {
-    document.querySelectorAll('.evaluation-section, #welcomeSection').forEach(section => {
+    document.querySelectorAll('.dashboard-section').forEach(section => {
         section.style.display = 'none';
     });
+}
+
+// 加載Dashboard統計數據
+async function loadDashboardStats() {
+    try {
+        const response = await fetch(`${API_BASE}/evaluations`);
+        const result = await response.json();
+        
+        if (result.success) {
+            const evaluations = result.data;
+            const totalAssessments = evaluations.length;
+            
+            // 計算平均SUS分數
+            let totalSUS = 0;
+            let validScores = 0;
+            evaluations.forEach(evaluation => {
+                const susScore = evaluation.sus_evaluation?.score;
+                if (susScore && susScore > 0) {
+                    totalSUS += susScore;
+                    validScores++;
+                }
+            });
+            
+            const avgSUS = validScores > 0 ? (totalSUS / validScores).toFixed(1) : 'N/A';
+            
+            // 更新統計卡片
+            const totalElement = document.getElementById('totalAssessments');
+            const avgElement = document.getElementById('avgSusScore');
+            const activeElement = document.getElementById('activeProjects');
+            
+            if (totalElement) totalElement.textContent = totalAssessments;
+            if (avgElement) avgElement.textContent = avgSUS;
+            if (activeElement) {
+                const uniqueProjects = new Set(evaluations.map(e => e.project_info?.name || 'Unknown')).size;
+                activeElement.textContent = Math.max(uniqueProjects, 1);
+            }
+        }
+    } catch (error) {
+        console.error('載入統計數據失敗:', error);
+    }
+}
+
+// 加載項目列表
+async function loadProjects() {
+    try {
+        const response = await fetch(`${API_BASE}/evaluations`);
+        const result = await response.json();
+        
+        if (result.success) {
+            renderProjectsTable(result.data);
+        }
+    } catch (error) {
+        console.error('載入項目失敗:', error);
+    }
+}
+
+// 渲染項目表格
+function renderProjectsTable(evaluations) {
+    const tbody = document.getElementById('projectsTableBody');
+    if (!tbody) return;
+    
+    if (!evaluations || evaluations.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="4" style="text-align: center; padding: 40px; color: #6B7280;">
+                    <i class="bi bi-inbox" style="font-size: 48px; display: block; margin-bottom: 16px;"></i>
+                    No projects yet. Create your first AI agent assessment!
+                </td>
+            </tr>
+        `;
+        return;
+    }
+    
+    // 按項目名稱分組
+    const projectGroups = {};
+    evaluations.forEach(evaluation => {
+        const projectName = evaluation.project_info?.name || 'Unnamed Project';
+        if (!projectGroups[projectName]) {
+            projectGroups[projectName] = [];
+        }
+        projectGroups[projectName].push(evaluation);
+    });
+    
+    tbody.innerHTML = Object.entries(projectGroups).map(([projectName, projectEvals]) => {
+        const latestEval = projectEvals[0]; // 最新的評估
+        const createdDate = new Date(latestEval.created_at).toLocaleDateString();
+        const assessmentCount = projectEvals.length;
+        
+        return `
+            <tr>
+                <td>
+                    <strong>${projectName}</strong><br>
+                    <small style="color: #6B7280;">${latestEval.project_info?.description || 'No description'}</small>
+                </td>
+                <td>${createdDate}</td>
+                <td>${assessmentCount}</td>
+                <td>
+                    <div class="project-actions">
+                        <button class="action-btn" onclick="viewProject('${latestEval.id}')" title="View Details">
+                            <i class="bi bi-graph-up"></i>
+                        </button>
+                        <button class="action-btn" onclick="shareProject('${latestEval.id}')" title="Share">
+                            <i class="bi bi-share"></i>
+                        </button>
+                        <button class="action-btn" onclick="downloadReport('${latestEval.id}')" title="Download Report">
+                            <i class="bi bi-download"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+}
+
+// 查看項目詳情
+function viewProject(evaluationId) {
+    viewEvaluation(evaluationId);
+}
+
+// 分享項目
+function shareProject(evaluationId) {
+    const url = `${window.location.origin}?eval=${evaluationId}`;
+    if (navigator.share) {
+        navigator.share({
+            title: 'AI Agent Assessment Results',
+            url: url
+        });
+    } else {
+        navigator.clipboard.writeText(url).then(() => {
+            showAlert('鏈接已複製到剪貼板', 'success');
+        });
+    }
 }
 
 // 顯示加載動畫
@@ -783,19 +954,70 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
         
         switch (currentStep) {
-            case 'project-info':
-                showWelcome();
+            case 'new-project':
+                showDashboard();
                 break;
             case 'kano-evaluation':
-                showProjectInfo();
+                showNewProject();
                 break;
             case 'sus-evaluation':
                 showKanoEvaluation();
                 break;
             case 'results':
             case 'history':
-                showWelcome();
+                showDashboard();
                 break;
         }
     }
 });
+
+// 顯示設置頁面 (placeholder)
+function showSettings() {
+    showAlert('設置功能開發中...', 'info');
+}
+
+// 渲染歷史記錄表格
+function renderHistoryTable(evaluations) {
+    const tbody = document.getElementById('historyTableBody');
+    if (!tbody) return;
+    
+    if (!evaluations || evaluations.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="5" style="text-align: center; padding: 40px; color: #6B7280;">
+                    <i class="bi bi-inbox" style="font-size: 48px; display: block; margin-bottom: 16px;"></i>
+                    No assessment history available
+                </td>
+            </tr>
+        `;
+        return;
+    }
+    
+    tbody.innerHTML = evaluations.map(evaluation => {
+        const createdDate = new Date(evaluation.created_at).toLocaleDateString();
+        const susScore = evaluation.sus_evaluation?.score || 'N/A';
+        const overallScore = evaluation.overall_assessment?.overall_score || 'N/A';
+        
+        return `
+            <tr>
+                <td>
+                    <strong>${evaluation.project_info?.name || 'Unnamed Project'}</strong><br>
+                    <small style="color: #6B7280;">${evaluation.project_info?.description || 'No description'}</small>
+                </td>
+                <td>${createdDate}</td>
+                <td><span class="badge ${getScoreBadgeClass(susScore)}">${typeof susScore === 'number' ? susScore.toFixed(1) : susScore}</span></td>
+                <td><span class="badge ${getScoreBadgeClass(overallScore)}">${typeof overallScore === 'number' ? overallScore.toFixed(1) : overallScore}</span></td>
+                <td>
+                    <div class="project-actions">
+                        <button class="action-btn" onclick="viewEvaluation('${evaluation.id}')" title="View Details">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="action-btn" onclick="downloadReport('${evaluation.id}')" title="Download Report">
+                            <i class="bi bi-download"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+}

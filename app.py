@@ -82,7 +82,18 @@ def evaluate():
         
         project_info = data.get('project_info', {})
         kano_responses = data.get('kano_responses', {})
-        sus_responses = data.get('sus_responses', {})
+        sus_responses_raw = data.get('sus_responses', {})
+        
+        # 確保SUS響應為整數類型
+        sus_responses = {}
+        for key, value in sus_responses_raw.items():
+            try:
+                sus_responses[key] = int(value)
+            except (ValueError, TypeError):
+                return jsonify({
+                    'success': False,
+                    'error': f'SUS回答必須是數字，問題 {key} 的回答是 {value}'
+                }), 400
         
         # 驗證必要字段
         if not kano_responses:

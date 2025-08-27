@@ -80,62 +80,62 @@ class KanoModelEvaluator:
             {
                 "id": "response_accuracy",
                 "title": "Response Accuracy",
-                "functional": "如果AI Agent總是能準確理解您的問題並給出正確答案，您的感受如何？",
-                "dysfunctional": "如果AI Agent經常誤解您的問題或給出錯誤答案，您的感受如何？"
+                "functional": "How do you feel if the AI Agent always accurately understands your questions and provides correct answers?",
+                "dysfunctional": "How do you feel if the AI Agent frequently misunderstands your questions or gives incorrect answers?"
             },
             {
                 "id": "response_speed",
                 "title": "Response Speed",
-                "functional": "如果AI Agent能在1秒內回應您的問題，您的感受如何？",
-                "dysfunctional": "如果AI Agent需要超過10秒才能回應您的問題，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can respond to your questions within 1 second?",
+                "dysfunctional": "How do you feel if the AI Agent takes more than 10 seconds to respond to your questions?"
             },
             {
                 "id": "natural_conversation",
                 "title": "Natural Conversation",
-                "functional": "如果AI Agent能像人類一樣進行自然流暢的對話，您的感受如何？",
-                "dysfunctional": "如果AI Agent的回應生硬且不自然，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can engage in natural, flowing conversations like a human?",
+                "dysfunctional": "How do you feel if the AI Agent's responses are stiff and unnatural?"
             },
             {
                 "id": "context_memory",
                 "title": "Context Memory",
-                "functional": "如果AI Agent能記住整個對話歷史並保持上下文連貫，您的感受如何？",
-                "dysfunctional": "如果AI Agent無法記住之前的對話內容，每次都要重新解釋，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can remember the entire conversation history and maintain contextual coherence?",
+                "dysfunctional": "How do you feel if the AI Agent cannot remember previous conversation content and requires re-explanation each time?"
             },
             {
                 "id": "personalization",
                 "title": "Personalization Service",
-                "functional": "如果AI Agent能根據您的偏好和歷史記錄提供個人化服務，您的感受如何？",
-                "dysfunctional": "如果AI Agent無法提供任何個人化服務，對所有人都是相同回應，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can provide personalized services based on your preferences and history?",
+                "dysfunctional": "How do you feel if the AI Agent cannot provide any personalized services and gives the same responses to everyone?"
             },
             {
                 "id": "multi_modal",
                 "title": "Multi-modal Interaction",
-                "functional": "如果AI Agent能處理文字、圖片、語音等多種輸入方式，您的感受如何？",
-                "dysfunctional": "如果AI Agent只能處理純文字輸入，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can handle multiple input types like text, images, and voice?",
+                "dysfunctional": "How do you feel if the AI Agent can only handle pure text input?"
             },
             {
                 "id": "error_handling",
                 "title": "Error Handling",
-                "functional": "如果AI Agent在出錯時能主動道歉並提供解決方案，您的感受如何？",
-                "dysfunctional": "如果AI Agent出錯時不承認錯誤，繼續堅持錯誤回答，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can proactively apologize and provide solutions when it makes mistakes?",
+                "dysfunctional": "How do you feel if the AI Agent does not acknowledge mistakes and continues to insist on incorrect answers?"
             },
             {
                 "id": "learning_ability",
                 "title": "Learning Ability",
-                "functional": "如果AI Agent能從與您的互動中學習並逐漸改善服務品質，您的感受如何？",
-                "dysfunctional": "如果AI Agent完全無法學習改進，重複犯同樣的錯誤，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can learn from interactions with you and gradually improve service quality?",
+                "dysfunctional": "How do you feel if the AI Agent cannot learn or improve at all, repeating the same mistakes?"
             },
             {
                 "id": "emotional_intelligence",
                 "title": "Emotional Intelligence",
-                "functional": "如果AI Agent能理解您的情感並給予適當的情感回應，您的感受如何？",
-                "dysfunctional": "如果AI Agent完全無法理解情感，對情緒化的問題給出冷漠回應，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can understand your emotions and provide appropriate emotional responses?",
+                "dysfunctional": "How do you feel if the AI Agent cannot understand emotions at all and gives cold responses to emotional questions?"
             },
             {
                 "id": "privacy_protection",
                 "title": "Privacy Protection",
-                "functional": "如果AI Agent能嚴格保護您的隱私資訊並透明說明數據使用方式，您的感受如何？",
-                "dysfunctional": "如果AI Agent可能洩露您的隱私資訊且不說明數據如何使用，您的感受如何？"
+                "functional": "How do you feel if the AI Agent can strictly protect your privacy information and transparently explain data usage?",
+                "dysfunctional": "How do you feel if the AI Agent might leak your privacy information and does not explain how data is used?"
             }
         ]
     

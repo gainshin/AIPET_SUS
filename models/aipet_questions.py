@@ -26,6 +26,7 @@ class AIPETQuestion:
     text: str
     dimension: AIPETDimension
     sub_category: str
+    kano_question_id: str
     is_required: bool = False  # All AIPET questions are optional
 
 class AIPETQuestionnaire:
@@ -35,67 +36,77 @@ class AIPETQuestionnaire:
         self.questions = self._initialize_questions()
     
     def _initialize_questions(self) -> List[AIPETQuestion]:
-        """初始化 AIPET 開放性問題"""
+        """初始化 AIPET 開放性問題 - 與 Kano 問題建立對應關係"""
         return [
             AIPETQuestion(
-                id="I1",
-                text="Describe your preferred way to communicate your interview intentions to an AI system. Would you rather use structured forms, natural conversation, voice commands, or a combination? What would make you feel most understood?",
-                dimension=AIPETDimension.INTERACTION,
-                sub_category="Communication Preferences"
-            ),
-            AIPETQuestion(
-                id="P2", 
-                text="What are your biggest privacy concerns when interacting with an AI interviewing system? How would you want the system to address these concerns throughout the interview process?",
-                dimension=AIPETDimension.PRIVACY,
-                sub_category="Privacy Concerns"
-            ),
-            AIPETQuestion(
-                id="T1",
-                text="Think about a time when you might disagree with an AI interviewer's assessment or decision. How would you want the system to handle this situation? What would need to happen for you to trust the process again?",
+                id="response_accuracy",  # 對應 Kano: Response Accuracy
+                text="When an AI Agent gives you inaccurate responses, what specific feedback mechanisms would help you correct it most effectively? What transparency about its confidence levels or reasoning would you want to see?",
                 dimension=AIPETDimension.TRUST,
-                sub_category="Conflict Resolution"
+                sub_category="Response Accuracy & Trust",
+                kano_question_id="response_accuracy"
             ),
             AIPETQuestion(
-                id="A1",
-                text="When the AI interviewer makes autonomous decisions during your interview (such as adjusting question difficulty or focus areas), what level of control would you prefer to maintain? Describe your ideal balance between AI autonomy and your oversight.",
-                dimension=AIPETDimension.AGENCY,
-                sub_category="Autonomy Balance"
-            ),
-            AIPETQuestion(
-                id="E1",
-                text="If you started an interview process on your phone and needed to continue on your laptop, or came back to it days later, what information should the AI remember about you? What should it \"forget\" to respect your privacy?",
-                dimension=AIPETDimension.EXPERIENCE,
-                sub_category="Cross-device Continuity"
-            ),
-            AIPETQuestion(
-                id="T2",
-                text="What would an AI interviewing system need to show or tell you during the process to make you feel confident that it's making fair and accurate evaluations? Describe the transparency you need to trust the system.",
-                dimension=AIPETDimension.TRUST,
-                sub_category="Transparency Requirements"
-            ),
-            AIPETQuestion(
-                id="A2", 
-                text="Think about a scenario where the AI interviewer needs to handle an unexpected situation (like technical difficulties or unclear responses). What boundaries should the AI have, and when should it escalate to human intervention?",
-                dimension=AIPETDimension.AGENCY,
-                sub_category="Capability Boundaries"
-            ),
-            AIPETQuestion(
-                id="P1",
-                text="When an AI interviewer needs access to your personal information (resume, portfolio, previous interview records), how would you want to be asked for permission? Describe the approach that would make you feel most comfortable and in control.",
-                dimension=AIPETDimension.PRIVACY,
-                sub_category="Permission Management"
-            ),
-            AIPETQuestion(
-                id="I2",
-                text="Imagine you could customize how much the AI interviewer controls versus how much you control during the interview process. Walk us through your ideal \"control spectrum\" - when would you want full automation versus manual control?",
+                id="response_speed",  # 對應 Kano: Response Speed  
+                text="How would you prefer an AI Agent to manage your expectations during processing delays? Should it show progress indicators, offer interim responses, or give you control over speed vs quality trade-offs?",
                 dimension=AIPETDimension.INTERACTION,
-                sub_category="Control Spectrum"
+                sub_category="Response Timing & Control",
+                kano_question_id="response_speed"
             ),
             AIPETQuestion(
-                id="E2",
-                text="Describe how you would want an AI interviewer to learn and adapt from your previous interactions. What kind of personalization would enhance your experience versus what might feel intrusive?",
+                id="natural_conversation",  # 對應 Kano: Natural Conversation
+                text="Describe your ideal balance between natural conversation flow and structured interaction with an AI Agent. When would you prefer guided prompts vs free-form dialogue? What makes conversation feel authentic to you?",
+                dimension=AIPETDimension.INTERACTION,
+                sub_category="Conversational Preferences", 
+                kano_question_id="natural_conversation"
+            ),
+            AIPETQuestion(
+                id="context_memory",  # 對應 Kano: Context Memory
+                text="What information should an AI Agent remember about your conversations across sessions? How would you want to control what it remembers vs forgets? What memory capabilities would enhance vs concern you?",
                 dimension=AIPETDimension.EXPERIENCE,
-                sub_category="Adaptive Learning"
+                sub_category="Context & Memory Management",
+                kano_question_id="context_memory"
+            ),
+            AIPETQuestion(
+                id="personalization",  # 對應 Kano: Personalization Service
+                text="How would you want an AI Agent to learn your preferences without feeling invasive? What kind of personalization would enhance your experience, and what boundaries should it never cross?",
+                dimension=AIPETDimension.EXPERIENCE,
+                sub_category="Personalization & Boundaries",
+                kano_question_id="personalization"
+            ),
+            AIPETQuestion(
+                id="multi_modal",  # 對應 Kano: Multi-modal Interaction
+                text="When interacting with an AI Agent across different modes (text, voice, images), how should it maintain consistency? What control would you want over switching between interaction modes?",
+                dimension=AIPETDimension.INTERACTION,
+                sub_category="Multi-modal Control",
+                kano_question_id="multi_modal"
+            ),
+            AIPETQuestion(
+                id="error_handling",  # 對應 Kano: Error Handling
+                text="When an AI Agent makes mistakes, what recovery process would rebuild your trust? How should it acknowledge errors, and what control should you have over correcting its understanding?",
+                dimension=AIPETDimension.TRUST,
+                sub_category="Error Recovery & Trust",
+                kano_question_id="error_handling"
+            ),
+            AIPETQuestion(
+                id="learning_ability",  # 對應 Kano: Learning Ability
+                text="How would you want to be involved in an AI Agent's learning process? What feedback mechanisms would feel natural to you, and how should the agent show it's incorporating your input?",
+                dimension=AIPETDimension.AGENCY,
+                sub_category="Collaborative Learning",
+                kano_question_id="learning_ability"
+            ),
+            AIPETQuestion(
+                id="emotional_intelligence",  # 對應 Kano: Emotional Intelligence  
+                text="How should an AI Agent respond to your emotional state? What boundaries should it maintain, and what level of emotional recognition vs response would feel appropriate vs intrusive?",
+                dimension=AIPETDimension.AGENCY,
+                sub_category="Emotional Boundaries",
+                kano_question_id="emotional_intelligence"
+            ),
+            AIPETQuestion(
+                id="privacy_protection",  # 對應 Kano: Privacy Protection
+                text="How would you want an AI Agent to request and manage access to your personal data? What transparency about data usage would make you comfortable, and what controls should always remain in your hands?",
+                dimension=AIPETDimension.PRIVACY,
+                sub_category="Data Privacy & Control",
+                kano_question_id="privacy_protection"
             )
         ]
     
@@ -108,6 +119,7 @@ class AIPETQuestionnaire:
                 "dimension": q.dimension.value,
                 "dimension_name": self._get_dimension_name(q.dimension),
                 "sub_category": q.sub_category,
+                "kano_question_id": q.kano_question_id,
                 "is_required": q.is_required
             }
             for q in self.questions

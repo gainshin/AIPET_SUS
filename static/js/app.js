@@ -272,6 +272,28 @@ function renderAIPETQuestions() {
     
     container.innerHTML = '';
     
+    // Filter AIPET questions based on Kano responses
+    // Only show AIPET questions where corresponding Kano response is "neutral" (value 3)
+    const conditionalQuestions = aipetQuestions.filter(question => {
+        const kanoQuestionId = question.kano_question_id;
+        const kanoResponse = kanoResponses[kanoQuestionId];
+        
+        // Show question if either functional or dysfunctional response is neutral (3)
+        return kanoResponse && (kanoResponse.functional === 3 || kanoResponse.dysfunctional === 3);
+    });
+    
+    if (conditionalQuestions.length === 0) {
+        container.innerHTML = `
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i>
+                <strong>No AIPET Questions Available</strong><br>
+                AIPET questions appear only when you select "I am neutral" for corresponding Kano Model questions. 
+                Your responses indicate clear preferences, which means no additional deep-dive questions are needed at this time.
+            </div>
+        `;
+        return;
+    }
+    
     // Group questions by dimension for better organization
     const dimensionGroups = {
         'A': { name: 'Agency (代理能力)', questions: [] },
@@ -281,9 +303,19 @@ function renderAIPETQuestions() {
         'T': { name: 'Trust (信任建立)', questions: [] }
     };
     
-    aipetQuestions.forEach(question => {
+    conditionalQuestions.forEach(question => {
         dimensionGroups[question.dimension].questions.push(question);
     });
+    
+    // Add introduction text
+    const introDiv = document.createElement('div');
+    introDiv.className = 'alert alert-primary mb-4';
+    introDiv.innerHTML = `
+        <i class="bi bi-lightbulb"></i>
+        <strong>Personalized AIPET Questions</strong><br>
+        These questions appear because you selected "I am neutral" for related features. Your insights will help us understand your specific needs and preferences for AI agent interaction design.
+    `;
+    container.appendChild(introDiv);
     
     // Render each dimension group
     Object.keys(dimensionGroups).forEach(dimension => {
@@ -299,26 +331,42 @@ function renderAIPETQuestions() {
         `;
         
         group.questions.forEach((question, index) => {
+            const kanoQuestionId = question.kano_question_id;
+            const kanoResponse = kanoResponses[kanoQuestionId];
+            
+            // Determine which Kano response triggered this question
+            let triggerReason = '';
+            if (kanoResponse.functional === 3 && kanoResponse.dysfunctional === 3) {
+                triggerReason = 'Both functional and dysfunctional responses were neutral';
+            } else if (kanoResponse.functional === 3) {
+                triggerReason = 'Functional response was neutral';
+            } else if (kanoResponse.dysfunctional === 3) {
+                triggerReason = 'Dysfunctional response was neutral';
+            }
+            
             const questionDiv = document.createElement('div');
             questionDiv.className = 'question-card aipet-question';
             questionDiv.innerHTML = `
                 <div class="question-title">
                     <i class="bi bi-chat-dots"></i>
-                    ${question.id}. ${question.text}
+                    ${question.text}
                 </div>
                 <div class="question-meta">
-                    <small class="text-muted">Category: ${question.sub_category} | Optional</small>
+                    <small class="text-muted">
+                        Category: ${question.sub_category} | 
+                        Triggered by: ${triggerReason} | Optional
+                    </small>
                 </div>
                 <div class="aipet-textarea-wrapper">
                     <textarea 
                         id="aipet-${question.id}" 
                         class="aipet-textarea" 
-                        placeholder="Share your thoughts here... (optional)"
+                        placeholder="Share your thoughts here... This question appeared because you were neutral about this feature."
                         rows="4"
                         onchange="updateAIPETResponse('${question.id}', this.value)"
                     ></textarea>
                     <div class="textarea-helper">
-                        <small class="text-muted">Feel free to elaborate on your preferences and experiences</small>
+                        <small class="text-muted">Help us understand your specific preferences and requirements</small>
                     </div>
                 </div>
             `;
@@ -333,7 +381,7 @@ function renderAIPETQuestions() {
     progressDiv.className = 'aipet-progress mt-3';
     progressDiv.innerHTML = `
         <div class="d-flex justify-content-between align-items-center">
-            <span id="aipetProgress">0 of ${aipetQuestions.length} questions answered</span>
+            <span id="aipetProgress">0 of ${conditionalQuestions.length} questions answered</span>
             <span class="text-muted">Complete as many as you'd like</span>
         </div>
     `;
@@ -356,8 +404,15 @@ function updateAIPETResponse(questionId, value) {
 function updateAIPETProgress() {
     const progressElement = document.getElementById('aipetProgress');
     if (progressElement) {
+        // Calculate available questions based on Kano responses
+        const conditionalQuestions = aipetQuestions.filter(question => {
+            const kanoQuestionId = question.kano_question_id;
+            const kanoResponse = kanoResponses[kanoQuestionId];
+            return kanoResponse && (kanoResponse.functional === 3 || kanoResponse.dysfunctional === 3);
+        });
+        
         const answered = Object.keys(aipetResponses).length;
-        const total = aipetQuestions.length;
+        const total = conditionalQuestions.length;
         progressElement.textContent = `${answered} of ${total} questions answered`;
     }
 }

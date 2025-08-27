@@ -1,6 +1,6 @@
 """
-Kano模型評估模組
-實現Kano模型的問卷設計、數據分析和結果分類功能
+Kano Model Evaluation Module
+Implements Kano model questionnaire design, data analysis and result classification
 """
 
 import pandas as pd
@@ -10,30 +10,30 @@ from dataclasses import dataclass
 from enum import Enum
 
 class KanoCategory(Enum):
-    """Kano模型分類"""
-    MUST_BE = "Must-be"  # 基礎型需求
-    ONE_DIMENSIONAL = "One-dimensional"  # 期望型需求
-    ATTRACTIVE = "Attractive"  # 魅力型需求
-    INDIFFERENT = "Indifferent"  # 無差異需求
-    REVERSE = "Reverse"  # 反向需求
-    QUESTIONABLE = "Questionable"  # 有疑問的需求
+    """Kano Model Categories"""
+    MUST_BE = "Must-be"  # Basic needs
+    ONE_DIMENSIONAL = "One-dimensional"  # Performance needs
+    ATTRACTIVE = "Attractive"  # Excitement needs
+    INDIFFERENT = "Indifferent"  # Indifferent needs
+    REVERSE = "Reverse"  # Reverse needs
+    QUESTIONABLE = "Questionable"  # Questionable needs
 
 @dataclass
 class KanoResult:
-    """Kano評估結果"""
+    """Kano Evaluation Result"""
     category: KanoCategory
-    satisfaction_impact: float  # 滿意度影響係數
-    dissatisfaction_impact: float  # 不滿意度影響係數
-    better_coefficient: float  # Better係數
-    worse_coefficient: float  # Worse係數
+    satisfaction_impact: float  # Satisfaction impact coefficient
+    dissatisfaction_impact: float  # Dissatisfaction impact coefficient
+    better_coefficient: float  # Better coefficient
+    worse_coefficient: float  # Worse coefficient
 
 class KanoModelEvaluator:
-    """Kano模型評估器"""
+    """Kano Model Evaluator"""
     
     def __init__(self):
-        # Kano分類決策表
+        # Kano classification decision table
         self.kano_table = {
-            # (功能性答案, 失功能性答案) -> 分類
+            # (functional answer, dysfunctional answer) -> category
             (1, 1): KanoCategory.QUESTIONABLE,  # 喜歡-喜歡
             (1, 2): KanoCategory.ATTRACTIVE,    # 喜歡-理所當然
             (1, 3): KanoCategory.ATTRACTIVE,    # 喜歡-無所謂
@@ -67,15 +67,15 @@ class KanoModelEvaluator:
         
         # 答案選項映射
         self.answer_mapping = {
-            1: "我喜歡這樣",
-            2: "理所當然應該這樣", 
-            3: "我無所謂",
-            4: "我勉強可以接受",
-            5: "我不喜歡這樣"
+            1: "I like it that way",
+            2: "It must be that way", 
+            3: "I am neutral",
+            4: "I can live with it that way",
+            5: "I dislike it that way"
         }
     
     def get_default_questions(self) -> List[Dict]:
-        """獲取預設的AI Agent評估問題"""
+        """Get default AI Agent evaluation questions"""
         return [
             {
                 "id": "response_accuracy",
@@ -267,17 +267,17 @@ class KanoModelEvaluator:
         one_dimensional.sort(key=lambda x: results[x].satisfaction_impact + results[x].dissatisfaction_impact, reverse=True)
         
         return {
-            "must_be_features": must_be[:3],  # 前3個最重要的基礎型需求
-            "attractive_features": attractive[:3],  # 前3個最重要的魅力型需求
-            "one_dimensional_features": one_dimensional[:3]  # 前3個最重要的期望型需求
+            "must_be_features": must_be[:3],  # Top 3 most important must-be needs
+            "attractive_features": attractive[:3],  # Top 3 most important attractive needs
+            "one_dimensional_features": one_dimensional[:3]  # Top 3 most important one-dimensional needs
         }
     
     def generate_improvement_recommendations(self, results: Dict[str, KanoResult], questions: List[Dict]) -> List[Dict]:
-        """生成改進建議"""
+        """Generate improvement recommendations"""
         recommendations = []
         questions_dict = {q["id"]: q for q in questions}
         
-        # 基礎型需求建議（必須優先滿足）
+        # Must-be needs recommendations (must be satisfied first)
         must_be_features = [qid for qid, result in results.items() 
                            if result.category == KanoCategory.MUST_BE]
         if must_be_features:
@@ -285,14 +285,14 @@ class KanoModelEvaluator:
             top_must_be = must_be_features[0] if must_be_features else None
             if top_must_be:
                 recommendations.append({
-                    "priority": "高",
-                    "category": "基礎型需求",
+                    "priority": "High",
+                    "category": "Must-be Needs",
                     "feature": questions_dict[top_must_be]["title"],
-                    "description": f"用戶認為{questions_dict[top_must_be]['title']}是基礎需求，必須優先確保其穩定性和可靠性。",
-                    "action": "立即改進並確保100%可靠性"
+                    "description": f"Users consider {questions_dict[top_must_be]['title']} as a basic requirement, must prioritize ensuring its stability and reliability.",
+                    "action": "Immediate improvement and ensure 100% reliability"
                 })
         
-        # 期望型需求建議（直接影響滿意度）
+        # One-dimensional needs recommendations (directly affect satisfaction)
         one_dim_features = [qid for qid, result in results.items() 
                            if result.category == KanoCategory.ONE_DIMENSIONAL]
         if one_dim_features:
@@ -300,14 +300,14 @@ class KanoModelEvaluator:
             top_one_dim = one_dim_features[0] if one_dim_features else None
             if top_one_dim:
                 recommendations.append({
-                    "priority": "中",
-                    "category": "期望型需求", 
+                    "priority": "Medium",
+                    "category": "One-dimensional Needs", 
                     "feature": questions_dict[top_one_dim]["title"],
-                    "description": f"{questions_dict[top_one_dim]['title']}的改善直接提升用戶滿意度。",
-                    "action": "持續優化性能和用戶體驗"
+                    "description": f"Improving {questions_dict[top_one_dim]['title']} directly enhances user satisfaction.",
+                    "action": "Continuously optimize performance and user experience"
                 })
         
-        # 魅力型需求建議（創造驚喜）
+        # Attractive needs recommendations (create delight)
         attractive_features = [qid for qid, result in results.items() 
                               if result.category == KanoCategory.ATTRACTIVE]
         if attractive_features:
@@ -315,11 +315,11 @@ class KanoModelEvaluator:
             top_attractive = attractive_features[0] if attractive_features else None
             if top_attractive:
                 recommendations.append({
-                    "priority": "低",
-                    "category": "魅力型需求",
+                    "priority": "Low",
+                    "category": "Attractive Needs",
                     "feature": questions_dict[top_attractive]["title"],
-                    "description": f"{questions_dict[top_attractive]['title']}是可以創造用戶驚喜的功能。",
-                    "action": "在資源允許的情況下投資開發"
+                    "description": f"{questions_dict[top_attractive]['title']} is a feature that can create user delight.",
+                    "action": "Invest in development when resources allow"
                 })
         
         return recommendations

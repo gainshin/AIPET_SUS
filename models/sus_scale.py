@@ -24,7 +24,7 @@ class SUSResult:
     grade: SUSGrade  # 評級
     percentile: float  # 百分位數
     adjective_rating: str  # 形容詞評級
-    acceptability: str  # 可接受性
+    acceptability: str  # Acceptability level
 
 class SUSEvaluator:
     """SUS量表評估器"""
@@ -118,11 +118,11 @@ class SUSEvaluator:
             (92, 100, "最佳")
         ]
         
-        # 可接受性等級
+        # Acceptability levels
         self.acceptability_levels = [
-            (0, 51, "不可接受"),
-            (51, 71, "邊際可接受"),
-            (71, 100, "可接受")
+            (0, 51, "Not Acceptable"),
+            (51, 71, "Marginally Acceptable"),
+            (71, 100, "Acceptable")
         ]
     
     def get_questions(self) -> List[Dict]:
@@ -213,7 +213,7 @@ class SUSEvaluator:
         return self.adjective_ratings[-1][2]  # 返回最高評級
     
     def get_acceptability(self, score: float) -> str:
-        """獲取可接受性等級"""
+        """Get acceptability level"""
         for min_score, max_score, level in self.acceptability_levels:
             if min_score <= score < max_score:
                 return level

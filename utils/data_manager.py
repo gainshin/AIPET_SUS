@@ -343,7 +343,7 @@ class DataManager:
                 'SUS等級': sus_data.get('grade', ''),
                 '百分位數': sus_data.get('percentile', 0),
                 '形容詞評級': sus_data.get('adjective_rating', ''),
-                '可接受性': sus_data.get('acceptability', ''),
+                'Acceptability': sus_data.get('acceptability', ''),
                 '綜合分數': overall_data.get('overall_score', 0),
                 '成熟度等級': overall_data.get('maturity_level', ''),
                 'Kano平均滿意度影響': kano_data.get('summary', {}).get('average_satisfaction_impact', 0),

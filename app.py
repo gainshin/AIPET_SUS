@@ -177,15 +177,15 @@ def generate_overall_assessment(kano_summary, sus_result):
     
     # 確定成熟度等級
     if assessment['overall_score'] >= 85:
-        assessment['maturity_level'] = '優秀 - 市場領先'
+        assessment['maturity_level'] = 'Excellent - Market Leading'
     elif assessment['overall_score'] >= 75:
-        assessment['maturity_level'] = '良好 - 具競爭力'
+        assessment['maturity_level'] = 'Good - Competitive'
     elif assessment['overall_score'] >= 65:
-        assessment['maturity_level'] = '中等 - 需要改進'
+        assessment['maturity_level'] = 'Average - Needs Improvement'
     elif assessment['overall_score'] >= 55:
-        assessment['maturity_level'] = '較差 - 急需優化'
+        assessment['maturity_level'] = 'Poor - Requires Optimization'
     else:
-        assessment['maturity_level'] = '極差 - 重大問題'
+        assessment['maturity_level'] = 'Very Poor - Critical Issues'
     
     # 識別關鍵優勢
     if sus_result.score >= 80:

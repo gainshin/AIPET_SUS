@@ -526,5 +526,1338 @@
     "id": "1f1cfbd7",
     "created_at": "2025-08-27T14:04:55.605219",
     "updated_at": "2025-08-27T14:04:55.605219"
+  },
+  "63d42f13": {
+    "project_info": {
+      "name": "AI Assistant Demo",
+      "description": "測試用 AI 助手系統",
+      "version": "1.0.0",
+      "team": "測試團隊"
+    },
+    "evaluation_date": "2025-08-27T14:22:10.268510",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "One-dimensional",
+          "satisfaction_impact": 0.8,
+          "dissatisfaction_impact": 0.8,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.2,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_security": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "integration": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 2,
+          "One-dimensional": 1,
+          "Attractive": 5,
+          "Indifferent": 2,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 20.0,
+          "One-dimensional": 10.0,
+          "Attractive": 50.0,
+          "Indifferent": 20.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.62,
+        "average_dissatisfaction_impact": 0.33999999999999997,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "privacy_security"
+          ],
+          "attractive_features": [
+            "natural_conversation",
+            "personalization",
+            "multi_modal"
+          ],
+          "one_dimensional_features": [
+            "response_speed"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "上下文記憶",
+          "description": "用戶認為上下文記憶是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        },
+        {
+          "priority": "中",
+          "category": "期望型需求",
+          "feature": "回應速度",
+          "description": "回應速度的改善直接提升用戶滿意度。",
+          "action": "持續優化性能和用戶體驗"
+        },
+        {
+          "priority": "低",
+          "category": "魅力型需求",
+          "feature": "自然對話",
+          "description": "自然對話是可以創造用戶驚喜的功能。",
+          "action": "在資源允許的情況下投資開發"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 75.0,
+      "grade": "C",
+      "percentile": 71.2260281150973,
+      "adjective_rating": "好",
+      "acceptability": "可接受",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 75.0,
+          "grade": "C",
+          "percentile": 71.2260281150973,
+          "adjective_rating": "好",
+          "acceptability": "可接受"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 75.0,
+          "industry_average": 68.0,
+          "difference_from_average": 7.0,
+          "percentile": 71.2260281150973,
+          "better_than_percent": 71.2260281150973,
+          "benchmark_category": "中上 (前50%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 76.8,
+      "maturity_level": "良好 - 具競爭力",
+      "key_strengths": [
+        "具備魅力型功能",
+        "基礎功能穩定"
+      ],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "63d42f13",
+    "created_at": "2025-08-27T14:22:10.268621",
+    "updated_at": "2025-08-27T14:22:10.268621"
+  },
+  "8de17987": {
+    "project_info": {
+      "name": "AI interviewer agent",
+      "description": "AI interviewer agent",
+      "version": "",
+      "team": "joshua"
+    },
+    "evaluation_date": "2025-08-27T14:25:06.792075",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "multi_modal": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "error_handling": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "emotional_intelligence": {
+          "category": "Reverse",
+          "satisfaction_impact": -0.0,
+          "dissatisfaction_impact": -0.5,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        },
+        "privacy_protection": {
+          "category": "Questionable",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 7,
+          "One-dimensional": 0,
+          "Attractive": 0,
+          "Indifferent": 0,
+          "Reverse": 2,
+          "Questionable": 1
+        },
+        "category_percentages": {
+          "Must-be": 70.0,
+          "One-dimensional": 0.0,
+          "Attractive": 0.0,
+          "Indifferent": 0.0,
+          "Reverse": 20.0,
+          "Questionable": 10.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.0,
+        "average_dissatisfaction_impact": 0.6,
+        "priority_features": {
+          "must_be_features": [
+            "response_speed",
+            "natural_conversation",
+            "context_memory"
+          ],
+          "attractive_features": [],
+          "one_dimensional_features": []
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "回應速度",
+          "description": "用戶認為回應速度是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 50.0,
+      "grade": "F",
+      "percentile": 7.493369953432707,
+      "adjective_rating": "差",
+      "acceptability": "不可接受",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 50.0,
+          "grade": "F",
+          "percentile": 7.493369953432707,
+          "adjective_rating": "差",
+          "acceptability": "不可接受"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "普通",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "良好",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "普通",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "良好",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 3,
+            "normalized_score": 2,
+            "performance": "良好",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "普通",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 4,
+            "normalized_score": 1,
+            "performance": "普通",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [
+          {
+            "priority": "中",
+            "area": "系統複雜性",
+            "current_score": 1,
+            "suggestion": "簡化用戶界面和交互流程，降低系統複雜度",
+            "question": "我覺得這個系統過於複雜"
+          },
+          {
+            "priority": "中",
+            "area": "獨立使用性",
+            "current_score": 1,
+            "suggestion": "完善幫助文檔和引導功能，降低技術門檻",
+            "question": "我需要技術人員的協助才能使用這個系統"
+          },
+          {
+            "priority": "中",
+            "area": "使用難度",
+            "current_score": 1,
+            "suggestion": "重新設計複雜的功能，提供更簡單的替代方案",
+            "question": "我覺得這個系統很難使用"
+          },
+          {
+            "priority": "中",
+            "area": "學習成本",
+            "current_score": 1,
+            "suggestion": "減少預備知識要求，提供更好的上手體驗",
+            "question": "在使用這個系統之前，我需要先學習很多東西"
+          }
+        ],
+        "benchmark_comparison": {
+          "your_score": 50.0,
+          "industry_average": 68.0,
+          "difference_from_average": -18.0,
+          "percentile": 7.493369953432707,
+          "better_than_percent": 7.493369953432707,
+          "benchmark_category": "需要改進 (後25%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "容易學習",
+          "用戶信心足"
+        ],
+        "weaknesses": [
+          "系統過於複雜",
+          "需要技術支援",
+          "使用複雜",
+          "學習成本高"
+        ]
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 50.0,
+      "maturity_level": "極差 - 重大問題",
+      "key_strengths": [],
+      "critical_issues": [
+        "可用性嚴重不足",
+        "過多基礎型需求未滿足"
+      ],
+      "priority_actions": [
+        "立即改善系統可用性",
+        "優先滿足基礎型需求"
+      ]
+    },
+    "id": "8de17987",
+    "created_at": "2025-08-27T14:25:06.792210",
+    "updated_at": "2025-08-27T14:25:06.792210"
+  },
+  "e159432d": {
+    "project_info": {
+      "name": "ChatGPT Assistant Demo",
+      "description": "AI-powered conversational assistant for customer service",
+      "version": "2.0.1",
+      "team": "AI Innovation Team"
+    },
+    "evaluation_date": "2025-08-27T14:32:43.783746",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "One-dimensional",
+          "satisfaction_impact": 0.8,
+          "dissatisfaction_impact": 0.8,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.2,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_security": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "integration": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 0.0,
+          "worse_coefficient": 0.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 2,
+          "One-dimensional": 1,
+          "Attractive": 4,
+          "Indifferent": 3,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 20.0,
+          "One-dimensional": 10.0,
+          "Attractive": 40.0,
+          "Indifferent": 30.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.52,
+        "average_dissatisfaction_impact": 0.32999999999999996,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "privacy_security"
+          ],
+          "attractive_features": [
+            "natural_conversation",
+            "personalization",
+            "multi_modal"
+          ],
+          "one_dimensional_features": [
+            "response_accuracy"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "上下文記憶",
+          "description": "用戶認為上下文記憶是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        },
+        {
+          "priority": "中",
+          "category": "期望型需求",
+          "feature": "回應準確性",
+          "description": "回應準確性的改善直接提升用戶滿意度。",
+          "action": "持續優化性能和用戶體驗"
+        },
+        {
+          "priority": "低",
+          "category": "魅力型需求",
+          "feature": "自然對話",
+          "description": "自然對話是可以創造用戶驚喜的功能。",
+          "action": "在資源允許的情況下投資開發"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 75.0,
+      "grade": "C",
+      "percentile": 71.2260281150973,
+      "adjective_rating": "好",
+      "acceptability": "可接受",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 75.0,
+          "grade": "C",
+          "percentile": 71.2260281150973,
+          "adjective_rating": "好",
+          "acceptability": "可接受"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 75.0,
+          "industry_average": 68.0,
+          "difference_from_average": 7.0,
+          "percentile": 71.2260281150973,
+          "better_than_percent": 71.2260281150973,
+          "benchmark_category": "中上 (前50%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 75.3,
+      "maturity_level": "良好 - 具競爭力",
+      "key_strengths": [
+        "具備魅力型功能",
+        "基礎功能穩定"
+      ],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "e159432d",
+    "created_at": "2025-08-27T14:32:43.783879",
+    "updated_at": "2025-08-27T14:32:43.783879"
+  },
+  "e09ca869": {
+    "project_info": {
+      "name": "Voice Assistant Test",
+      "description": "Smart voice-controlled AI assistant with natural language processing",
+      "version": "3.1.0",
+      "team": "Voice Technology Team"
+    },
+    "evaluation_date": "2025-08-27T14:40:00.183042",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "One-dimensional",
+          "satisfaction_impact": 0.8,
+          "dissatisfaction_impact": 0.8,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.2,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_security": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "integration": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 2,
+          "One-dimensional": 1,
+          "Attractive": 4,
+          "Indifferent": 3,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 20.0,
+          "One-dimensional": 10.0,
+          "Attractive": 40.0,
+          "Indifferent": 30.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.52,
+        "average_dissatisfaction_impact": 0.32999999999999996,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "privacy_security"
+          ],
+          "attractive_features": [
+            "natural_conversation",
+            "personalization",
+            "multi_modal"
+          ],
+          "one_dimensional_features": [
+            "response_speed"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "高",
+          "category": "基礎型需求",
+          "feature": "上下文記憶",
+          "description": "用戶認為上下文記憶是基礎需求，必須優先確保其穩定性和可靠性。",
+          "action": "立即改進並確保100%可靠性"
+        },
+        {
+          "priority": "中",
+          "category": "期望型需求",
+          "feature": "回應速度",
+          "description": "回應速度的改善直接提升用戶滿意度。",
+          "action": "持續優化性能和用戶體驗"
+        },
+        {
+          "priority": "低",
+          "category": "魅力型需求",
+          "feature": "自然對話",
+          "description": "自然對話是可以創造用戶驚喜的功能。",
+          "action": "在資源允許的情況下投資開發"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 85.0,
+      "grade": "B",
+      "percentile": 91.3085038052915,
+      "adjective_rating": "優秀",
+      "acceptability": "Acceptable",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 85.0,
+          "grade": "B",
+          "percentile": 91.3085038052915,
+          "adjective_rating": "優秀",
+          "acceptability": "Acceptable"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 85.0,
+          "industry_average": 68.0,
+          "difference_from_average": 17.0,
+          "percentile": 91.3085038052915,
+          "better_than_percent": 91.3085038052915,
+          "benchmark_category": "頂尖 (前10%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 82.3,
+      "maturity_level": "Good - Competitive",
+      "key_strengths": [
+        "用戶滿意度高",
+        "具備魅力型功能",
+        "基礎功能穩定"
+      ],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "e09ca869",
+    "created_at": "2025-08-27T14:40:00.183356",
+    "updated_at": "2025-08-27T14:40:00.183356"
+  },
+  "e97937b9": {
+    "project_info": {
+      "name": "Voice Assistant Test",
+      "description": "Smart voice-controlled AI assistant with natural language processing",
+      "version": "3.1.0",
+      "team": "Voice Technology Team"
+    },
+    "evaluation_date": "2025-08-27T14:41:58.453821",
+    "kano_evaluation": {
+      "results": {
+        "response_accuracy": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "response_speed": {
+          "category": "One-dimensional",
+          "satisfaction_impact": 0.8,
+          "dissatisfaction_impact": 0.8,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "natural_conversation": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.2,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "context_memory": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "personalization": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "multi_modal": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "error_handling": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "learning_ability": {
+          "category": "Attractive",
+          "satisfaction_impact": 1.0,
+          "dissatisfaction_impact": 0.1,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 0.5
+        },
+        "privacy_security": {
+          "category": "Must-be",
+          "satisfaction_impact": 0.2,
+          "dissatisfaction_impact": 1.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        },
+        "integration": {
+          "category": "Indifferent",
+          "satisfaction_impact": 0.0,
+          "dissatisfaction_impact": 0.0,
+          "better_coefficient": 1.0,
+          "worse_coefficient": 1.0
+        }
+      },
+      "summary": {
+        "category_counts": {
+          "Must-be": 2,
+          "One-dimensional": 1,
+          "Attractive": 4,
+          "Indifferent": 3,
+          "Reverse": 0,
+          "Questionable": 0
+        },
+        "category_percentages": {
+          "Must-be": 20.0,
+          "One-dimensional": 10.0,
+          "Attractive": 40.0,
+          "Indifferent": 30.0,
+          "Reverse": 0.0,
+          "Questionable": 0.0
+        },
+        "total_questions": 10,
+        "average_satisfaction_impact": 0.52,
+        "average_dissatisfaction_impact": 0.32999999999999996,
+        "priority_features": {
+          "must_be_features": [
+            "context_memory",
+            "privacy_security"
+          ],
+          "attractive_features": [
+            "natural_conversation",
+            "personalization",
+            "multi_modal"
+          ],
+          "one_dimensional_features": [
+            "response_speed"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "High",
+          "category": "Must-be Needs",
+          "feature": "上下文記憶",
+          "description": "Users consider 上下文記憶 as a basic requirement, must prioritize ensuring its stability and reliability.",
+          "action": "Immediate improvement and ensure 100% reliability"
+        },
+        {
+          "priority": "Medium",
+          "category": "One-dimensional Needs",
+          "feature": "回應速度",
+          "description": "Improving 回應速度 directly enhances user satisfaction.",
+          "action": "Continuously optimize performance and user experience"
+        },
+        {
+          "priority": "Low",
+          "category": "Attractive Needs",
+          "feature": "自然對話",
+          "description": "自然對話 is a feature that can create user delight.",
+          "action": "Invest in development when resources allow"
+        }
+      ]
+    },
+    "sus_evaluation": {
+      "score": 85.0,
+      "grade": "B",
+      "percentile": 91.3085038052915,
+      "adjective_rating": "優秀",
+      "acceptability": "Acceptable",
+      "detailed_analysis": {
+        "overall_result": {
+          "score": 85.0,
+          "grade": "B",
+          "percentile": 91.3085038052915,
+          "adjective_rating": "優秀",
+          "acceptability": "Acceptable"
+        },
+        "question_analysis": {
+          "q1": {
+            "question": "我想要經常使用這個AI Agent系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q2": {
+            "question": "我覺得這個系統過於複雜",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q3": {
+            "question": "我覺得這個系統很容易使用",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q4": {
+            "question": "我需要技術人員的協助才能使用這個系統",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q5": {
+            "question": "我覺得這個系統的各項功能整合得很好",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q6": {
+            "question": "我覺得這個系統有太多不一致的地方",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q7": {
+            "question": "我想大部分的人能很快學會使用這個系統",
+            "response": 4,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q8": {
+            "question": "我覺得這個系統很難使用",
+            "response": 1,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": false
+          },
+          "q9": {
+            "question": "我對使用這個系統感到很有信心",
+            "response": 5,
+            "normalized_score": 4,
+            "performance": "優秀",
+            "is_positive": true
+          },
+          "q10": {
+            "question": "在使用這個系統之前，我需要先學習很多東西",
+            "response": 2,
+            "normalized_score": 3,
+            "performance": "優秀",
+            "is_positive": false
+          }
+        },
+        "improvement_suggestions": [],
+        "benchmark_comparison": {
+          "your_score": 85.0,
+          "industry_average": 68.0,
+          "difference_from_average": 17.0,
+          "percentile": 91.3085038052915,
+          "better_than_percent": 91.3085038052915,
+          "benchmark_category": "頂尖 (前10%)"
+        },
+        "strengths": [
+          "用戶參與度高",
+          "系統複雜度適中",
+          "容易使用",
+          "獨立使用性佳",
+          "功能整合良好",
+          "系統一致性佳",
+          "容易學習",
+          "使用簡單",
+          "用戶信心足",
+          "學習成本低"
+        ],
+        "weaknesses": []
+      }
+    },
+    "overall_assessment": {
+      "overall_score": 82.3,
+      "maturity_level": "Good - Competitive",
+      "key_strengths": [
+        "用戶滿意度高",
+        "具備魅力型功能",
+        "基礎功能穩定"
+      ],
+      "critical_issues": [],
+      "priority_actions": []
+    },
+    "id": "e97937b9",
+    "created_at": "2025-08-27T14:41:58.453944",
+    "updated_at": "2025-08-27T14:41:58.453944"
   }
 }

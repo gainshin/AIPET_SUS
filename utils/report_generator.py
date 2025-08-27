@@ -1,6 +1,6 @@
 """
-報告生成器
-生成PDF格式的評估報告
+Report Generator
+Generate PDF format evaluation reports
 """
 
 import os
@@ -260,7 +260,7 @@ class ReportGenerator:
         <b>主要發現：</b>
         • 綜合評估分數：{overall.get('overall_score', 0):.1f}/100 ({overall.get('maturity_level', 'N/A')})
         • SUS可用性分數：{sus_data.get('score', 0):.1f}/100 ({sus_data.get('grade', 'N/A')}等級)
-        • 系統可接受性：{sus_data.get('acceptability', 'N/A')}
+        • System Acceptability: {sus_data.get('acceptability', 'N/A')}
         • 用戶滿意度：{sus_data.get('adjective_rating', 'N/A')}
         """
         
@@ -311,7 +311,7 @@ class ReportGenerator:
             ['等級', sus_data.get('grade', 'N/A'), 'A-F等級評定'],
             ['百分位數', f"{sus_data.get('percentile', 0):.1f}%", '在所有系統中的排名'],
             ['形容詞評級', sus_data.get('adjective_rating', 'N/A'), '主觀感受描述'],
-            ['可接受性', sus_data.get('acceptability', 'N/A'), '是否達到可用標準']
+            ['Acceptability', sus_data.get('acceptability', 'N/A'), 'Meets usability standards']
         ]
         
         sus_table = Table(sus_overview_data, colWidths=[3*cm, 3*cm, 7*cm])

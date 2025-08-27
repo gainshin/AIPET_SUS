@@ -171,26 +171,26 @@ function renderKanoOptions(questionId, type) {
 
 // Select Kano option
 function selectKanoOption(questionId, type, value, element) {
-    // 移除同組其他選項的選中狀態
+    // Remove selected state from other options in the same group
     const group = element.parentNode;
     group.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
     
-    // 設置當前選項為選中
+    // Set current option as selected
     element.classList.add('selected');
     
-    // 保存回答
+    // Save response
     if (!kanoResponses[questionId]) {
         kanoResponses[questionId] = {};
     }
     kanoResponses[questionId][type] = value;
     
-    // 檢查進度
+    // Check progress
     updateKanoProgress();
 }
 
 // Update Kano progress
 function updateKanoProgress() {
-    const totalQuestions = kanoQuestions.length * 2; // 每個問題有兩個子問題
+    const totalQuestions = kanoQuestions.length * 2; // Each question has two sub-questions
     let answeredCount = 0;
     
     Object.values(kanoResponses).forEach(response => {
@@ -288,17 +288,17 @@ function renderSUSOptions(questionId) {
 
 // Select SUS option
 function selectSUSOption(questionId, value, element) {
-    // 移除同組其他選項的選中狀態
+    // Remove selected state from other options in the same group
     const group = element.parentNode;
     group.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
     
-    // 設置當前選項為選中
+    // Set current option as selected
     element.classList.add('selected');
     
-    // 保存回答
+    // Save response
     susResponses[questionId] = value;
     
-    // 檢查進度
+    // Check progress
     updateSUSProgress();
 }
 
@@ -319,18 +319,18 @@ async function submitSUSEvaluation() {
         return;
     }
     
-    // 顯示加載動畫
+    // Show loading animation
     showLoading(true);
     
     try {
-        // 準備評估數據
+        // Prepare evaluation data
         const evaluationData = {
             project_info: projectInfo,
             kano_responses: kanoResponses,
             sus_responses: susResponses
         };
         
-        // 發送評估請求
+        // Send evaluation request
         const response = await fetch(`${API_BASE}/evaluate`, {
             method: 'POST',
             headers: {
@@ -446,15 +446,15 @@ function renderKanoResults(kano) {
     
     return `
         <div class="result-card">
-            <h4><i class="bi bi-diagram-3 text-success"></i> Kano模型矩陣分析</h4>
+            <h4><i class="bi bi-diagram-3 text-success"></i> Kano Model Matrix Analysis</h4>
             <p class="text-muted mb-3">
-                <small>氣泡大小表示各類別的比例，位置反映功能實現程度與滿意度影響的關係</small>
+                <small>Bubble size represents category proportion, position reflects relationship between implementation level and satisfaction impact</small>
             </p>
             <div class="chart-container" style="height: 400px;">
                 <canvas id="kanoChart"></canvas>
             </div>
             <div class="mt-3">
-                <h6>類別分布統計</h6>
+                <h6>Category Distribution Statistics</h6>
                 ${Object.entries(categories).map(([category, percentage]) => `
                     <div class="progress-item">
                         <div class="progress-label">
@@ -470,11 +470,11 @@ function renderKanoResults(kano) {
             </div>
             <div class="mt-3">
                 <small class="text-muted">
-                    <strong>解讀說明：</strong><br>
-                    • <strong>基礎型(Must-be):</strong> 必須具備的功能，缺少會造成不滿<br>
-                    • <strong>期望型(One-dimensional):</strong> 越完善滿意度越高<br>
-                    • <strong>魅力型(Attractive):</strong> 意外驚喜功能，能大幅提升滿意度<br>
-                    • <strong>無差異:</strong> 對滿意度影響不大的功能
+                    <strong>Interpretation Guide:</strong><br>
+                    • <strong>Must-be:</strong> Essential features that cause dissatisfaction when missing<br>
+                    • <strong>One-dimensional:</strong> Performance features where more is better<br>
+                    • <strong>Attractive:</strong> Delighter features that greatly boost satisfaction<br>
+                    • <strong>Indifferent:</strong> Features with minimal impact on satisfaction
                 </small>
             </div>
         </div>
@@ -570,7 +570,7 @@ function renderKanoChart() {
     const categories = kano.summary.category_percentages;
     const results = kano.results || {};
     
-    // 準備散點圖數據
+    // Prepare scatter plot data
     const scatterData = [];
     const categoryColors = {
         'Must-be': '#dc3545',
@@ -612,7 +612,7 @@ function renderKanoChart() {
             scatterData.push({
                 x: x,
                 y: y,
-                r: Math.sqrt(percentage) * 3, // 氣泡大小反映比例
+                r: Math.sqrt(percentage) * 3, // Bubble size reflects proportion
                 category: category,
                 percentage: percentage
             });
@@ -647,7 +647,7 @@ function renderKanoChart() {
                     max: 1,
                     title: {
                         display: true,
-                        text: '功能實現程度 (Well Implemented)',
+                        text: 'Implementation Level (Well Implemented)',
                         font: { size: 12 }
                     },
                     grid: {
@@ -668,7 +668,7 @@ function renderKanoChart() {
                     max: 1,
                     title: {
                         display: true,
-                        text: '滿意度影響 (High Satisfaction)',
+                        text: 'Satisfaction Impact (High Satisfaction)',
                         font: { size: 12 }
                     },
                     grid: {
@@ -759,12 +759,12 @@ function getGradeBadgeColor(grade) {
 
 function getKanoCategoryName(category) {
     const names = {
-        'Must-be': '基礎型',
-        'One-dimensional': '期望型',
-        'Attractive': '魅力型',
-        'Indifferent': '無差異',
-        'Reverse': '反向',
-        'Questionable': '有疑問'
+        'Must-be': 'Must-be',
+        'One-dimensional': 'One-dimensional',
+        'Attractive': 'Attractive',
+        'Indifferent': 'Indifferent',
+        'Reverse': 'Reverse',
+        'Questionable': 'Questionable'
     };
     return names[category] || category;
 }
@@ -839,7 +839,7 @@ function startNewEvaluation() {
     evaluationResult = null;
     currentStep = 'welcome';
     
-    // 清空表單
+    // Clear form
     document.getElementById('projectInfoForm').reset();
     
     // 顯示歡迎頁面
@@ -856,7 +856,7 @@ async function showHistory() {
     currentStep = 'history';
     updateNavigation('history');
     
-    showLoading(true, '正在加載評估記錄...');
+    showLoading(true, 'Loading evaluation records...');
     
     try {
         const response = await fetch(`${API_BASE}/evaluations`);
@@ -881,7 +881,7 @@ function renderHistory(evaluations) {
 
 // 查看評估詳情
 async function viewEvaluation(evaluationId) {
-    showLoading(true, '正在加載評估詳情...');
+    showLoading(true, 'Loading evaluation details...');
     
     try {
         const response = await fetch(`${API_BASE}/evaluation/${evaluationId}`);
@@ -954,7 +954,7 @@ async function loadDashboardStats() {
             }
         }
     } catch (error) {
-        console.error('載入統計數據失敗:', error);
+        console.error('Failed to load statistics:', error);
     }
 }
 
@@ -968,7 +968,7 @@ async function loadProjects() {
             renderProjectsTable(result.data);
         }
     } catch (error) {
-        console.error('載入項目失敗:', error);
+        console.error('Failed to load projects:', error);
     }
 }
 

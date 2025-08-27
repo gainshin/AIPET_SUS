@@ -40,3 +40,326 @@
 10.12.253.40 - - [27/Aug/2025 14:09:53] "GET / HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:09:53] "GET /static/js/app.js HTTP/1.1" 200 -
 10.12.253.40 - - [27/Aug/2025 14:09:53] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:02] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:10] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:20] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:24] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:56] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:10:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:10:56] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:11:02] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:11:09] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:11:09] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:11:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:11:14] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:11:47] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:12:17] "GET /api/health HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:14:13] "GET /api/evaluations HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:15:23] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:24] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:28] "GET /api/evaluation/6a9225e6 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:15:34] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:35] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:35] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:47] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:15:47] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:16:17] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:16:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:16:17] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:16:17] "GET /?eval=1f1cfbd7 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:16:21] "GET /api/evaluation/1f1cfbd7 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:16:31] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:16:31] "GET /api/evaluations HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:16:42] "GET /api/kano/questions HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:16:48] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:17:18] "GET /api/evaluation/6a9225e6 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:20:35] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:20:37] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:20:37] "GET /api/evaluations HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:21:41] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:41] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:41] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:21:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/home/user/webapp/test_kano_matrix.py', reloading
+ * Detected change in '/home/user/webapp/test_kano_matrix.py', reloading
+ * Detected change in '/home/user/webapp/test_kano_matrix.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:22:10] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /?eval=63d42f13 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:16] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:22:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.12.253.40 - - [27/Aug/2025 14:23:27] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:27] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:27] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:28] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:28] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:28] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:28] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:28] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:31] "GET /api/evaluation/63d42f13 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:49] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:49] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:23:51] "GET /api/evaluation/1f1cfbd7 HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:25:06] "POST /api/evaluate HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET / HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:31:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/home/user/webapp/test_english_interface.py', reloading
+ * Detected change in '/home/user/webapp/test_english_interface.py', reloading
+ * Detected change in '/home/user/webapp/test_english_interface.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:32:19] "GET /api/kano/questions HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:32:19] "GET /api/sus/questions HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:32:19] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/create_english_demo.py', reloading
+ * Detected change in '/home/user/webapp/create_english_demo.py', reloading
+ * Detected change in '/home/user/webapp/create_english_demo.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:32:43] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:11] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:12] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:12] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:35:16] "GET /api/evaluation/e159432d HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Detected change in '/home/user/webapp/models/sus_scale.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Detected change in '/home/user/webapp/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/utils/data_manager.py', reloading
+ * Detected change in '/home/user/webapp/utils/data_manager.py', reloading
+ * Detected change in '/home/user/webapp/utils/data_manager.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Detected change in '/home/user/webapp/utils/report_generator.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /?eval=e159432d HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /static/js/app.js HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /api/sus/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /api/kano/questions HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:51] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:39:52] "GET /api/evaluations HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/test_full_english.py', reloading
+ * Detected change in '/home/user/webapp/test_full_english.py', reloading
+ * Detected change in '/home/user/webapp/test_full_english.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:39:57] "GET /api/evaluation/e159432d HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:40:00] "POST /api/evaluate HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+10.12.253.40 - - [27/Aug/2025 14:40:36] "GET /api/evaluations HTTP/1.1" 200 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:40:41] "GET /api/evaluations HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:40:44] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:40:44] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:40:44] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:40:46] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:40:46] "GET /api/evaluations HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+10.12.253.40 - - [27/Aug/2025 14:40:58] "GET /api/evaluation/e159432d HTTP/1.1" 200 -
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Detected change in '/home/user/webapp/models/kano_model.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 903-792-757
+127.0.0.1 - - [27/Aug/2025 14:41:58] "POST /api/evaluate HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:06] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:09] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:09] "GET /api/evaluations HTTP/1.1" 200 -
+10.12.253.40 - - [27/Aug/2025 14:42:16] "GET /api/evaluation/e97937b9 HTTP/1.1" 200 -
